@@ -1,0 +1,18 @@
+name: nekoton_webview
+
+packages:
+  - .
+
+scripts:
+  analyze:
+    exec: flutter analyze .
+    description: Analyze a specific package in this project
+
+  check-format:
+    exec: dart format --set-exit-if-changed .
+    failFast: true
+    description: Check the format of a specific package in this project.
+
+  generate-js:
+    run: bash scripts/generate-js.sh
+    description: Generate JS bindings

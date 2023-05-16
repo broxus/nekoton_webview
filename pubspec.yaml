@@ -10,9 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_inappwebview: ">=5.0.0 <6.0.0"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  melos: ^3.0.1
   mocktail: ^0.3.0
   very_good_analysis: ^4.0.0
+
+flutter:
+  assets:
+    - assets/main.js
