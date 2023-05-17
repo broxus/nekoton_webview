@@ -14,6 +14,10 @@ scripts:
     failFast: true
     description: Check the format of a specific package in this project.
 
+  test:
+    run: melos run test:flutter --no-select
+    description: Run all Dart & Flutter tests in this project.
+
   test:flutter:
     exec: "flutter test test"
     description: Run Flutter tests for a specific package in this project.

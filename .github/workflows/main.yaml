@@ -31,5 +31,5 @@ jobs:
         run: melos run check-format --no-select
       - name: Dart code analysis
         run: melos run analyze --no-select
-#      - name: Run all Dart & Flutter tests
-#        run: melos run test --no-select
+      - name: Run all Dart & Flutter tests
+        run: melos run test --no-select
