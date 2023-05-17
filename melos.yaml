@@ -2,6 +2,7 @@ name: nekoton_webview
 
 packages:
   - .
+  - example
 
 scripts:
   analyze:
@@ -12,6 +13,24 @@ scripts:
     exec: dart format --set-exit-if-changed .
     failFast: true
     description: Check the format of a specific package in this project.
+
+  test:flutter:
+    exec: "flutter test test"
+    description: Run Flutter tests for a specific package in this project.
+    concurrency: 1
+    failFast: true
+    packageFilters:
+      flutter: true
+      dirExists: test
+
+  test:integration:
+    exec: "flutter test --flavor development integration_test"
+    description: Run Flutter teintegration teststs for a specific package in this project.
+    concurrency: 1
+    failFast: true
+    packageFilters:
+      flutter: true
+      dirExists: integration_test
 
   generate-js:
     run: bash scripts/generate-js.sh

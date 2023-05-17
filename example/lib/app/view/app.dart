@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nekoton_webview_example/counter/counter.dart';
 import 'package:nekoton_webview_example/l10n/l10n.dart';
+import 'package:nekoton_webview_example/webview/webview.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const WebviewPage(),
     );
   }
 }
