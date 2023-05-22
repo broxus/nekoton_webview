@@ -39,3 +39,8 @@ scripts:
   generate-js:
     run: bash scripts/generate-js.sh
     description: Generate JS bindings
+
+command:
+  clean:
+    hooks:
+      post: bash scripts/clean.sh

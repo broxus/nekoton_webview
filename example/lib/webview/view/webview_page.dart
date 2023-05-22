@@ -11,7 +11,7 @@ const publicKey =
 class WebviewPage extends StatelessWidget {
   const WebviewPage({super.key});
 
-  dynamic _getProviderState() => {
+  Map<String, Object> _getProviderState() => {
         'version': '0.3.0',
         'numericVersion': 3000,
         'networkId': 1,
@@ -21,7 +21,7 @@ class WebviewPage extends StatelessWidget {
         'permissions': <String, Object>{},
       };
 
-  dynamic _requestPermissions() => {
+  Map<String, Object> _requestPermissions() => {
         'basic': true,
         'accountInteraction': {
           'address': address,
