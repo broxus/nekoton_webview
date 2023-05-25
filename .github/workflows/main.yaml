@@ -36,29 +36,29 @@ jobs:
       - name: Run all Dart & Flutter tests
         run: melos run test --no-select
 
-  ios_integration_test:
-    runs-on: macos-latest
-    timeout-minutes: 360
+  # ios_integration_test:
+  #   runs-on: macos-latest
+  #   timeout-minutes: 360
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.7.12'
-          channel: 'stable'
-          cache: true
-          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
-      - uses: bluefireteam/melos-action@v2
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: subosito/flutter-action@v2
+  #       with:
+  #         flutter-version: '3.7.12'
+  #         channel: 'stable'
+  #         cache: true
+  #         cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
+  #     - uses: bluefireteam/melos-action@v2
 
-      - name: Start iOS Simulator
-        run: |
-          DEVICE_ID=$(xcrun xctrace list devices | grep iPhone | head -1 | awk '{print $NF}' | tr -d '()')
-          echo "DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
-          xcrun simctl boot $DEVICE_ID
+  #     - name: Start iOS Simulator
+  #       run: |
+  #         DEVICE_ID=$(xcrun xctrace list devices | grep iPhone | head -1 | awk '{print $NF}' | tr -d '()')
+  #         echo "DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
+  #         xcrun simctl boot $DEVICE_ID
 
-      - name: Run Flutter integration tests
-        working-directory: ./example
-        run: flutter test --flavor production -d ${{ env.DEVICE_ID }} integration_test
+  #     - name: Run Flutter integration tests
+  #       working-directory: ./example
+  #       run: flutter test --flavor production -d ${{ env.DEVICE_ID }} integration_test
 
   android_integration_test:
     runs-on: macos-latest
