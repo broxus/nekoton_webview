@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "generate": "node generate.js",
     "clean": "rm -rf node_modules"
   },
   "devDependencies": {
     "@types/events": "3.0.0",
+    "everscale-inpage-provider": "^0.3.60",
     "ts-loader": "9.4.2",
     "typescript": "5.0.4",
     "webpack-cli": "5.1.1"

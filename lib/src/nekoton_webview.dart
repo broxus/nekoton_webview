@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:nekoton_webview/src/models/models.dart';
 
 ///
 extension NekotonWebview on InAppWebViewController {
@@ -16,7 +17,7 @@ extension NekotonWebview on InAppWebViewController {
   /// )
   ///```
   Future<void> initNekotonProvider({
-    required NekotonProviderHandler handler,
+    required ProviderApi providerApi,
   }) async {
     await addUserScript(
       userScript: UserScript(
@@ -30,18 +31,11 @@ extension NekotonWebview on InAppWebViewController {
       handlerName: 'nekotonWebviewHandler',
       callback: (List<dynamic> arguments) {
         final arg = arguments.elementAt(0) as Map<String, dynamic>;
+        final method = arg['method'] as String;
+        final params = arg['params'];
 
-        return handler(
-          method: arg['method'] as String,
-          params: arg['params'],
-        );
+        return providerApi.call(method, params);
       },
     );
   }
 }
-
-///Inpage provider api call handler
-typedef NekotonProviderHandler = dynamic Function({
-  required String method,
-  dynamic params,
-});

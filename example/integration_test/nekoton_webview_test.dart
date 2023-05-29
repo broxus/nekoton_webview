@@ -7,6 +7,8 @@ import 'package:integration_test/integration_test.dart';
 
 import 'package:nekoton_webview/nekoton_webview.dart';
 
+import 'mock.dart';
+
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -24,7 +26,7 @@ void main() {
         InAppWebView(
           onWebViewCreated: (controller) async {
             await controller.initNekotonProvider(
-              handler: ({required String method, dynamic params}) {},
+              providerApi: MockProviderApi((String method, dynamic params) {}),
             );
 
             await controller.loadData(data: html);
@@ -52,9 +54,9 @@ void main() {
         InAppWebView(
           onWebViewCreated: (controller) async {
             await controller.initNekotonProvider(
-              handler: ({required String method, dynamic params}) {
+              providerApi: MockProviderApi((String method, dynamic params) {
                 methodCompleter.complete(method);
-              },
+              }),
             );
 
             await controller.loadData(data: html);
