@@ -28,13 +28,29 @@ jobs:
           cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
       - uses: bluefireteam/melos-action@v2
 
-      # Dart/Flutter
+      # Dart/Flutter format checking
+      - name: Clean before check-format
+        run: melos clean
+      - name: Boostrap everything
+        run: melos bs
       - name: Check Dart format
         run: melos run check-format --no-select
+
+      # JS bundle
+      - name: Generate JS bundle
+        run: melos generate-js
+
+      # Dart/Flutter
+      - name: Generate dart code
+        run: melos codegen --no-select
       - name: Dart code analysis
         run: melos run analyze --no-select
-      - name: Run all Dart & Flutter tests
+      - name: Run Dart tests
         run: melos run test --no-select
+
+      # Check if all the generated code is up to date
+      - name: Check git diff
+        run: melos git-check
 
   # ios_integration_test:
   #   runs-on: macos-latest
