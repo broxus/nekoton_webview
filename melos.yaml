@@ -1,0 +1,57 @@
+name: nekoton_webview
+
+packages:
+  - .
+  - example
+
+scripts:
+  analyze:
+    exec: flutter analyze .
+    description: Analyze a specific package in this project
+
+  check-format:
+    exec: dart format --set-exit-if-changed .
+    failFast: true
+    description: Check the format of a specific package in this project.
+
+  test:
+    run: melos run test:flutter --no-select
+    description: Run all Dart & Flutter tests in this project.
+
+  test:flutter:
+    exec: "flutter test test"
+    description: Run Flutter tests for a specific package in this project.
+    concurrency: 1
+    failFast: true
+    packageFilters:
+      flutter: true
+      dirExists: test
+
+  test:integration:
+    exec: "flutter test --flavor development integration_test"
+    description: Run Flutter teintegration teststs for a specific package in this project.
+    concurrency: 1
+    failFast: true
+    packageFilters:
+      flutter: true
+      dirExists: integration_test
+
+  generate-js:
+    run: bash scripts/generate-js.sh
+    description: Generate JS bindings
+
+  generate-dart:
+    run: bash scripts/generate-dart.sh
+    description: Generate Dart inpage provider api bindings
+
+  codegen:
+    exec: "flutter packages pub run build_runner build --delete-conflicting-outputs"
+    description: Generate code for all packages
+    failFast: true
+    packageFilters:
+      dependsOn: "build_runner"
+
+command:
+  clean:
+    hooks:
+      post: bash scripts/clean.sh

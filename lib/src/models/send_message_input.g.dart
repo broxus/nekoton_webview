@@ -1,0 +1,29 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'send_message_input.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+SendMessageInput _$SendMessageInputFromJson(Map<String, dynamic> json) =>
+    SendMessageInput(
+      json['sender'] as String,
+      json['recipient'] as String,
+      BigInt.tryParse(json['amount'] as String),
+      json['bounce'] as bool,
+      json['payload'] == null
+          ? null
+          : FunctionCall.fromJson(json['payload'] as Map<String, dynamic>),
+      json['stateInit'] as String?,
+    );
+
+Map<String, dynamic> _$SendMessageInputToJson(SendMessageInput instance) =>
+    <String, dynamic>{
+      'sender': instance.sender,
+      'recipient': instance.recipient,
+      'amount': SendMessageInput._bigIntToString(instance.amount),
+      'bounce': instance.bounce,
+      'payload': instance.payload?.toJson(),
+      'stateInit': instance.stateInit,
+    };

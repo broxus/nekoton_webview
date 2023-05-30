@@ -5,19 +5,25 @@ publish_to: none
 
 environment:
   sdk: ">=2.19.0 <3.0.0"
+  flutter: 3.7.0
 
 dependencies:
   bloc: ^8.1.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  flutter_inappwebview: 5.7.2
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
+  nekoton_webview:
+    path: ../
 
 dev_dependencies:
   bloc_test: ^9.1.1
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
   mocktail: ^0.3.0
   very_good_analysis: ^4.0.0
