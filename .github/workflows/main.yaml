@@ -9,13 +9,16 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # runs the CI everyday at 6AM
+    - cron: "0 6 * * *"
 
 jobs:
   semantic_pull_request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   build_and_test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       # Setup
@@ -77,7 +80,7 @@ jobs:
   #       run: flutter test --flavor production -d ${{ env.DEVICE_ID }} integration_test
 
   android_integration_test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 360
 
     steps:

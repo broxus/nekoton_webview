@@ -3,6 +3,7 @@
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
+[![app](https://github.com/broxus/nekoton_webview/actions/workflows/main.yaml/badge.svg)](https://github.com/broxus/nekoton_webview/actions/workflows/main.yaml)
 
 Flutter webview nekoton inpage provider bindings
 
