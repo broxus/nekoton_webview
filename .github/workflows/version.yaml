@@ -37,7 +37,7 @@ jobs:
       - uses: bluefireteam/melos-action@v2
 
       - name: Bump version using melos
-        run: melos version -a --yes ${{ inputs.version_parameters }}
+        run: melos version -a --no-git-tag-version --yes ${{ inputs.version_parameters }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5.0.1
