@@ -7,9 +7,10 @@ on:
       version_parameters:
         description: 'Parameters to pass to "melos version"'
         required: true
-        default: "--prerelease"
+        default: " "
         type: choice
         options:
+          - "--"
           - "--prerelease"
           - "--graduate"
 
@@ -24,6 +25,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          fetch-depth: 0
       - name: Setup git
         run: |
           git config user.name "Odrin"
