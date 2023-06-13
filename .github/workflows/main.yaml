@@ -80,7 +80,7 @@ jobs:
   #       run: flutter test --flavor production -d ${{ env.DEVICE_ID }} integration_test
 
   android_integration_test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 360
 
     steps:
@@ -114,6 +114,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 33
+          target: google_apis
           arch: x86_64
           ram-size: 1024M
           disk-size: 2048M
@@ -129,6 +130,7 @@ jobs:
           action: reactivecircus/android-emulator-runner@v2
           with: |
             api-level: 33
+            target: google_apis
             arch: x86_64
             ram-size: 1024M
             disk-size: 2048M
