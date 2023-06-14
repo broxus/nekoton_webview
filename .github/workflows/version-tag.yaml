@@ -1,4 +1,4 @@
-name: Version tag
+name: Push merged version tag
 
 on:
   pull_request:
