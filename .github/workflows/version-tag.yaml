@@ -23,5 +23,5 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_ACCESS_TOKEN }}
           custom_tag: ${{ steps.yaml_data.outputs.data }}
