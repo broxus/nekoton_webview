@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-07-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`nekoton_webview` - `v0.1.1`](#nekoton_webview---v011)
+
+Packages with other changes:
+
+ - [`nekoton_webview_example` - `v1.1.0`](#nekoton_webview_example---v110)
+
+Packages graduated to a stable release (see pre-releases prior to the stable version for changelog entries):
+
+ - `nekoton_webview` - `v0.1.1`
+ - `nekoton_webview_example` - `v1.1.0`
+
+---
+
+#### `nekoton_webview` - `v0.1.1`
+
+#### `nekoton_webview_example` - `v1.1.0`
+
+## 0.1.1
+
+ - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.
+
+
 ## 2023-06-15
 
 ### Changes
