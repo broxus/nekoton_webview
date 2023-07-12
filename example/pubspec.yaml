@@ -20,12 +20,15 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.1
+  broxus_flutter_analysis:
+    git:
+      url: https://github.com/broxus/flutter_templates.git
+      ref: broxus_flutter_analysis-v1.0.0
   flutter_test:
     sdk: flutter
   integration_test:
     sdk: flutter
   mocktail: ^0.3.0
-  very_good_analysis: ^4.0.0
 
 flutter:
   uses-material-design: true
