@@ -5,6 +5,10 @@ packages:
   - example
 
 scripts:
+  build_and_test:
+    description: GA main script
+    run: bash scripts/build_and_test.sh
+
   analyze:
     exec: flutter analyze .
     description: Analyze a specific package in this project
