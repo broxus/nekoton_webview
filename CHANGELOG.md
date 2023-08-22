@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-08-22
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.1.2`](#nekoton_webview---v012)
+ - [`nekoton_webview_example` - `v1.2.0`](#nekoton_webview_example---v120)
+
+---
+
+#### `nekoton_webview` - `v0.1.2`
+
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+
+#### `nekoton_webview_example` - `v1.2.0`
+
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.2
+
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+
+
 ## 2023-07-06
 
 ### Changes
