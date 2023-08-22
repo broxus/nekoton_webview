@@ -74,7 +74,7 @@ melos run format
 
 ### Prepare to commit 🤝🏻
 
-`melos run check-all` will ckeck, analyze and run all tests.
+`melos run check-all` will check, analyze and run all tests.
 
 ```
 melos run check-all
