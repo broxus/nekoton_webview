@@ -9,7 +9,7 @@ extension NekotonWebview on InAppWebViewController {
   /// InAppWebView(
   ///   onWebViewCreated: (InAppWebViewController controller) async {
   ///     await controller.initNekotonProvider(
-  ///        providerApi: MyProviderApi(),
+  ///       providerApi: MyProviderApi(),
   ///     );
   ///   }
   /// )
