@@ -8,8 +8,7 @@ abstract class ProviderApi {
   ///---
   ///Required permissions: none
   FutureOr<PermissionsPartial> requestPermissions(
-    RequestPermissionsInput input,
-  );
+      RequestPermissionsInput input);
 
   ///Updates `accountInteraction` permission value
   ///---
@@ -46,15 +45,13 @@ abstract class ProviderApi {
   ///---
   ///Required permissions: `basic`
   FutureOr<GetFullContractStateOutput> getFullContractState(
-    GetFullContractStateInput input,
-  );
+      GetFullContractStateInput input);
 
   ///Requests accounts with specified code hash
   ///---
   ///Required permissions: `basic`
   FutureOr<GetAccountsByCodeHashOutput> getAccountsByCodeHash(
-    GetAccountsByCodeHashInput input,
-  );
+      GetAccountsByCodeHashInput input);
 
   ///Requests contract transactions
   ///---
@@ -86,15 +83,13 @@ abstract class ProviderApi {
   ///---
   ///Required permissions: `basic`
   FutureOr<GetExpectedAddressOutput> getExpectedAddress(
-    GetExpectedAddressInput input,
-  );
+      GetExpectedAddressInput input);
 
   ///Unpacks all fields from the contract state using the specified ABI
   ///---
   ///Required permissions: `basic`
   FutureOr<GetContractFieldsOutput> getContractFields(
-    GetContractFieldsInput input,
-  );
+      GetContractFieldsInput input);
 
   ///Decodes initial contract data using the specified ABI
   ///---
@@ -117,13 +112,11 @@ abstract class ProviderApi {
   FutureOr<UnpackFromCellOutput> unpackFromCell(UnpackFromCellInput input);
 
   ///Extracts public key from raw account state
-  ///**NOTE:** can only be used on contracts which are deployed and has `pubkey`
-  /// header
+  ///**NOTE:** can only be used on contracts which are deployed and has `pubkey` header
   ///---
   ///Required permissions: `basic`
   FutureOr<ExtractPublicKeyOutput> extractPublicKey(
-    ExtractPublicKeyInput input,
-  );
+      ExtractPublicKeyInput input);
 
   ///Converts base64 encoded contract code into tvc with default init data
   ///---
@@ -174,15 +167,13 @@ abstract class ProviderApi {
   ///---
   ///Required permissions: `basic`
   FutureOr<DecodeTransactionOutput?> decodeTransaction(
-    DecodeTransactionInput input,
-  );
+      DecodeTransactionInput input);
 
   ///Decodes transaction events
   ///---
   ///Required permissions: `basic`
   FutureOr<DecodeTransactionEventsOutput> decodeTransactionEvents(
-    DecodeTransactionEventsInput input,
-  );
+      DecodeTransactionEventsInput input);
 
   ///Checks if a specific data hash was signed with the specified key
   ///---
@@ -193,8 +184,7 @@ abstract class ProviderApi {
   ///---
   ///Required permissions: `basic`
   FutureOr<SendUnsignedExternalMessageOutput> sendUnsignedExternalMessage(
-    SendUnsignedExternalMessageInput input,
-  );
+      SendUnsignedExternalMessageInput input);
 
   ///Adds asset to the selected account
   ///---
@@ -212,8 +202,7 @@ abstract class ProviderApi {
   ///Requires permissions: `accountInteraction`
   FutureOr<SignDataRawOutput> signDataRaw(SignDataRawInput input);
 
-  ///Encrypts arbitrary data with specified algorithm for each specified
-  ///recipient
+  ///Encrypts arbitrary data with specified algorithm for each specified recipient
   ///---
   ///Requires permissions: `accountInteraction`
   FutureOr<EncryptDataOutput> encryptData(EncryptDataInput input);
@@ -234,34 +223,27 @@ abstract class ProviderApi {
   ///Required permissions: `accountInteraction`
   FutureOr<SendMessageOutput> sendMessage(SendMessageInput input);
 
-  ///Sends an internal message from the user account without waiting for the
-  ///transaction.
+  ///Sends an internal message from the user account without waiting for the transaction.
   ///Shows an approval window to the user.
   FutureOr<SendMessageDelayedOutput> sendMessageDelayed(
-    SendMessageDelayedInput input,
-  );
+      SendMessageDelayedInput input);
 
   ///Sends an external message to the contract
   ///Shows and approval window to the user
   ///---
   ///Required permissions: `accountInteraction`
   FutureOr<SendExternalMessageOutput> sendExternalMessage(
-    SendExternalMessageInput input,
-  );
+      SendExternalMessageInput input);
 
-  ///Sends an external message to the contract without waiting for the
-  ///transaction.
+  ///Sends an external message to the contract without waiting for the transaction.
   ///Shows and approval window to the user
   FutureOr<SendExternalMessageDelayedOutput> sendExternalMessageDelayed(
-    SendExternalMessageDelayedInput input,
-  );
+      SendExternalMessageDelayedInput input);
 
   dynamic call(String method, Map<String, dynamic> params) {
     switch (method) {
       case 'requestPermissions':
-        return requestPermissions(
-          RequestPermissionsInput.fromJson(params),
-        );
+        return requestPermissions(RequestPermissionsInput.fromJson(params));
       case 'changeAccount':
         return changeAccount();
       case 'disconnect':
@@ -278,8 +260,7 @@ abstract class ProviderApi {
         return getFullContractState(GetFullContractStateInput.fromJson(params));
       case 'getAccountsByCodeHash':
         return getAccountsByCodeHash(
-          GetAccountsByCodeHashInput.fromJson(params),
-        );
+            GetAccountsByCodeHashInput.fromJson(params));
       case 'getTransactions':
         return getTransactions(GetTransactionsInput.fromJson(params));
       case 'getTransaction':
@@ -326,14 +307,12 @@ abstract class ProviderApi {
         return decodeTransaction(DecodeTransactionInput.fromJson(params));
       case 'decodeTransactionEvents':
         return decodeTransactionEvents(
-          DecodeTransactionEventsInput.fromJson(params),
-        );
+            DecodeTransactionEventsInput.fromJson(params));
       case 'verifySignature':
         return verifySignature(VerifySignatureInput.fromJson(params));
       case 'sendUnsignedExternalMessage':
         return sendUnsignedExternalMessage(
-          SendUnsignedExternalMessageInput.fromJson(params),
-        );
+            SendUnsignedExternalMessageInput.fromJson(params));
       case 'addAsset':
         return addAsset(AddAssetInput.fromJson(params));
       case 'signData':
@@ -354,14 +333,11 @@ abstract class ProviderApi {
         return sendExternalMessage(SendExternalMessageInput.fromJson(params));
       case 'sendExternalMessageDelayed':
         return sendExternalMessageDelayed(
-          SendExternalMessageDelayedInput.fromJson(params),
-        );
+            SendExternalMessageDelayedInput.fromJson(params));
 
       default:
         throw NoSuchMethodError.withInvocation(
-          this,
-          Invocation.method(Symbol(method), [params]),
-        );
+            this, Invocation.method(Symbol(method), [params]));
     }
   }
 }

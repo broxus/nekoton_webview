@@ -5,10 +5,14 @@ const ts = require('typescript');
 const apiFile = './node_modules/everscale-inpage-provider/dist/api.d.ts';
 const modelsFile = './node_modules/everscale-inpage-provider/dist/models.d.ts';
 const dartModelsPath = resolve(__dirname, '../lib/src/models');
+const dartSrcPath = resolve(__dirname, '../lib/src');
 
 const methods = [];
 const models = [
     { name: 'AssetTypeParams', members: [{ name: 'rootContract', type: 'String' }] },
+    { name: 'ConnectedEvent', members: [] },
+    { name: 'LoggedOutEvent', members: [] },
+    { name: 'DisconnectedEvent', members: [{ name: 'name', type: 'String?' }, { name: 'message', type: 'String?' }] },
 ];
 const visited = new Set(
     models.map(({ name }) => name),
@@ -136,10 +140,11 @@ function getTypeOperator(node, context) {;
  * @param {ts.PropertySignature} node 
  * @param {*} context 
  */
-function getPropertyType(node, context) {;
+function getPropertyType(node, context) {
     return getType(node.type, {
         ...context,
-        name: capitalize(context.name, node.name.text),
+        name: capitalize(context.name, node.name.text, context.suffix),
+        suffix: undefined,
     });
 }
 
@@ -187,8 +192,6 @@ function getInterface(node, context) {
 function addClassDeclaration(name, node, context) {
     if (visited.has(name)) return;
     visited.add(name);
-
-    const filename = snakeCase(name);
 
     models.push({
         name,
@@ -317,7 +320,7 @@ function modelTemplate({ name, members }) {
 function providerTemplate() {
     return `
         import 'dart:async';
-        import 'models.dart';
+        import 'package:nekoton_webview/src/models/models.dart';
 
         abstract class ProviderApi {
             ${methods.map(({ name, jsDoc, input, output }) => {
@@ -327,7 +330,7 @@ function providerTemplate() {
                 ].join('\n');
             }).join('\n')}
 
-            dynamic call(String method, dynamic params) {
+            dynamic call(String method, Map<String, dynamic> params) {
                 switch (method) {
                     ${methods.map(({ name, input }) => {
                         return `case '${name}': return ${name}(${input ? `${input}.fromJson(params)`: ''});`;
@@ -345,6 +348,9 @@ async function generate() {
     const providerApi = source.statements.find(
         (statement) => statement.kind === ts.SyntaxKind.TypeAliasDeclaration && statement.name.text === 'ProviderApi',
     );
+    const providerEvents = source.statements.find(
+        (statement) => statement.kind === ts.SyntaxKind.TypeAliasDeclaration && statement.name.text === 'ProviderEvents',
+    );
 
     providerApi.type.members.forEach((member) => {
         const input = member.type.members?.find(({ name }) => name.text === 'input');
@@ -358,6 +364,12 @@ async function generate() {
         });
     });
 
+    const skip = new Set(['connected', 'disconnected', 'loggedOut'])
+    providerEvents.type.members.forEach((member) => {
+        if (skip.has(member.name.text)) return
+        getTypeName(member, { suffix: 'Event' })
+    });
+
     await fs.promises.rm(dartModelsPath, { recursive: true, force: true });
     await fs.promises.mkdir(dartModelsPath, { recursive: true });
 
@@ -367,10 +379,9 @@ async function generate() {
             return fs.promises.writeFile(path, modelTemplate(model));
         }),
 
-        fs.promises.writeFile(resolve(dartModelsPath, 'provider_api.dart'), providerTemplate()),
+        fs.promises.writeFile(resolve(dartSrcPath, 'provider_api.dart'), providerTemplate()),
 
         fs.promises.writeFile(resolve(dartModelsPath, 'models.dart'), `
-            export 'provider_api.dart';
             ${models.map(({ name }) => `export '${snakeCase(name)}.dart';`).join('\n')}
         `),
     ]);
