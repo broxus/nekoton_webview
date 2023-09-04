@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'models.dart';
+import 'package:nekoton_webview/src/models/models.dart';
 
 part 'logged_out_event.g.dart';
 

@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'models.dart';
+import 'package:nekoton_webview/src/models/models.dart';
 
 part 'find_transaction_output.g.dart';
 
