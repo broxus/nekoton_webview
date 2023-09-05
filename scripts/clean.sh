@@ -7,5 +7,6 @@ find . -type f -name "*.g.dart" -delete
 find . -type f -name "*.reflectable.dart" -delete
 find . -type f -name "*.module.dart" -delete
 rm -rdf ./lib/src/models/
+rm -rdf ./lib/src/events/
 rm -rdf ./assets/
 rm -rdf ./js/node_modules/
