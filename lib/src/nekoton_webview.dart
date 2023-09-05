@@ -45,16 +45,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'networkChanged' method to let web-site know that your transport
   /// had changed.
-  Future<void> networkChanged({
-    required InAppWebViewController controller,
-    required NetworkChangedEvent event,
-  }) async {
+  Future<void> networkChanged(NetworkChangedEvent event) async {
     try {
       _logger.finest('networkChanged', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: "window.__dartNotifications.networkChanged('$jsonOutput')",
       );
     } catch (err, st) {
@@ -65,16 +62,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'messageStatusUpdated' method to let web-site know that some
   /// transaction was sent.
-  Future<void> messageStatusUpdated({
-    required InAppWebViewController controller,
-    required MessageStatusUpdatedEvent event,
-  }) async {
+  Future<void> messageStatusUpdated(MessageStatusUpdatedEvent event) async {
     try {
       _logger.finest('messageStatusUpdated', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source:
             "window.__dartNotifications.messageStatusUpdated('$jsonOutput')",
       );
@@ -86,16 +80,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'contractStateChanged' method to let web-site know that state of
   /// some contract had been changed.
-  Future<void> contractStateChanged({
-    required InAppWebViewController controller,
-    required ContractStateChangedEvent event,
-  }) async {
+  Future<void> contractStateChanged(ContractStateChangedEvent event) async {
     try {
       _logger.finest('contractStateChanged', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source:
             "window.__dartNotifications.contractStateChanged('$jsonOutput')",
       );
@@ -107,13 +98,11 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'loggedOut' method to let web-site know that user pressed logout
   /// and all seeds were removed.
-  Future<void> loggedOut({
-    required InAppWebViewController controller,
-  }) async {
+  Future<void> loggedOut() async {
     try {
       _logger.finest('loggedOut');
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: 'window.__dartNotifications.loggedOut({})',
       );
     } catch (err, st) {
@@ -124,17 +113,14 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'permissionsChanged' method to let web-site know that its
   /// permissions had been changed.
-  Future<void> permissionsChanged({
-    required InAppWebViewController controller,
-    required PermissionsChangedEvent event,
-  }) async {
+  Future<void> permissionsChanged(PermissionsChangedEvent event) async {
     try {
       _logger.finest('permissionsChanged', event);
 
       final jsonOutput =
           jsonEncode(event.toJson()).replaceAll('tonClient', 'basic');
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: "window.__dartNotifications.permissionsChanged('$jsonOutput')",
       );
     } catch (err, st) {
@@ -145,16 +131,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'transactionsFound' method to let web-site know that some
   /// transaction was found.
-  Future<void> transactionsFound({
-    required InAppWebViewController controller,
-    required TransactionsFoundEvent event,
-  }) async {
+  Future<void> transactionsFound(TransactionsFoundEvent event) async {
     try {
       _logger.finest('transactionsFound', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: "window.__dartNotifications.transactionsFound('$jsonOutput')",
       );
     } catch (err, st) {
@@ -165,16 +148,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'transactionsFound' method to let web-site know that user
   /// opened browser tab.
-  Future<void> connected({
-    required InAppWebViewController controller,
-    required ConnectedEvent event,
-  }) async {
+  Future<void> connected(ConnectedEvent event) async {
     try {
       _logger.finest('connected', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: "window.__dartNotifications.connected('$jsonOutput')",
       );
     } catch (err, st) {
@@ -185,16 +165,13 @@ extension NekotonWebview on InAppWebViewController {
 
   /// Call js 'transactionsFound' method to let web-site know that user
   /// left browser tab.
-  Future<void> disconnected({
-    required InAppWebViewController controller,
-    required DisconnectedEvent event,
-  }) async {
+  Future<void> disconnected(DisconnectedEvent event) async {
     try {
       _logger.finest('disconnected', event);
 
       final jsonOutput = jsonEncode(event.toJson());
 
-      await controller.evaluateJavascript(
+      await evaluateJavascript(
         source: "window.__dartNotifications.disconnected('$jsonOutput')",
       );
     } catch (err, st) {
