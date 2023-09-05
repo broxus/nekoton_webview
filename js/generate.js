@@ -334,14 +334,14 @@ function providerTemplate() {
             ${methods.map(({ name, jsDoc, input, output }) => {
                 return [
                     ...getJsDocComments(jsDoc),
-                    `FutureOr<${output}> ${name}(${input ? `${input} input` : ''});`
+                    `Future<${output}> ${name}(${input ? `${input} input,` : ''});`
                 ].join('\n');
             }).join('\n')}
 
-            dynamic call(String method, Map<String, dynamic> params) {
+            dynamic call(String method, dynamic params) {
                 switch (method) {
                     ${methods.map(({ name, input }) => {
-                        return `case '${name}': return ${name}(${input ? `${input}.fromJson(params)`: ''});`;
+                        return `case '${name}': return ${name}(${input ? `${input}.fromJson(params as Map<String, dynamic>),`: ''});`;
                     }).join('\n')}
             
                     default: throw NoSuchMethodError.withInvocation(this, Invocation.method(Symbol(method), [params]));

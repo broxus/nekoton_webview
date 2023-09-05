@@ -38,7 +38,7 @@ extension NekotonWebview on InAppWebViewController {
         final method = arg['method'] as String;
         final params = arg['params'];
 
-        return providerApi.call(method, params as Map<String, dynamic>);
+        return providerApi.call(method, params);
       },
     );
   }

@@ -9,246 +9,246 @@ class MockProviderApi extends ProviderApi {
   Handler handler;
 
   @override
-  FutureOr<GetProviderStateOutput> getProviderState() {
+  Future<GetProviderStateOutput> getProviderState() {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<PermissionsPartial> requestPermissions(
+  Future<PermissionsPartial> requestPermissions(
     RequestPermissionsInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<AddAssetOutput> addAsset(AddAssetInput input) {
+  Future<AddAssetOutput> addAsset(AddAssetInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<PermissionsPartial> changeAccount() {
+  Future<PermissionsPartial> changeAccount() {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<CodeToTvcOutput> codeToTvc(CodeToTvcInput input) {
+  Future<CodeToTvcOutput> codeToTvc(CodeToTvcInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecodeEventOutput?> decodeEvent(DecodeEventInput input) {
+  Future<DecodeEventOutput?> decodeEvent(DecodeEventInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecodeInputOutput?> decodeInput(DecodeInputInput input) {
+  Future<DecodeInputOutput?> decodeInput(DecodeInputInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecodeOutputOutput?> decodeOutput(DecodeOutputInput input) {
+  Future<DecodeOutputOutput?> decodeOutput(DecodeOutputInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecodeTransactionOutput?> decodeTransaction(
+  Future<DecodeTransactionOutput?> decodeTransaction(
     DecodeTransactionInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecodeTransactionEventsOutput> decodeTransactionEvents(
+  Future<DecodeTransactionEventsOutput> decodeTransactionEvents(
     DecodeTransactionEventsInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<DecryptDataOutput> decryptData(DecryptDataInput input) {
+  Future<DecryptDataOutput> decryptData(DecryptDataInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<void> disconnect() {
+  Future<void> disconnect() {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<EncodeInternalInputOutput> encodeInternalInput(FunctionCall input) {
+  Future<EncodeInternalInputOutput> encodeInternalInput(FunctionCall input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<EncryptDataOutput> encryptData(EncryptDataInput input) {
+  Future<EncryptDataOutput> encryptData(EncryptDataInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<EstimateFeesOutput> estimateFees(EstimateFeesInput input) {
+  Future<EstimateFeesOutput> estimateFees(EstimateFeesInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<ExecuteLocalOutput> executeLocal(ExecuteLocalInput input) {
+  Future<ExecuteLocalOutput> executeLocal(ExecuteLocalInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<ExtractPublicKeyOutput> extractPublicKey(
+  Future<ExtractPublicKeyOutput> extractPublicKey(
     ExtractPublicKeyInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<FindTransactionOutput> findTransaction(FindTransactionInput input) {
+  Future<FindTransactionOutput> findTransaction(FindTransactionInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetAccountsByCodeHashOutput> getAccountsByCodeHash(
+  Future<GetAccountsByCodeHashOutput> getAccountsByCodeHash(
     GetAccountsByCodeHashInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetBocHashOutput> getBocHash(GetBocHashInput input) {
+  Future<GetBocHashOutput> getBocHash(GetBocHashInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetCodeSaltOutput> getCodeSalt(GetCodeSaltInput input) {
+  Future<GetCodeSaltOutput> getCodeSalt(GetCodeSaltInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetContractFieldsOutput> getContractFields(
+  Future<GetContractFieldsOutput> getContractFields(
     GetContractFieldsInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetExpectedAddressOutput> getExpectedAddress(
+  Future<GetExpectedAddressOutput> getExpectedAddress(
     GetExpectedAddressInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetFullContractStateOutput> getFullContractState(
+  Future<GetFullContractStateOutput> getFullContractState(
     GetFullContractStateInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetTransactionOutput> getTransaction(GetTransactionInput input) {
+  Future<GetTransactionOutput> getTransaction(GetTransactionInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<GetTransactionsOutput> getTransactions(GetTransactionsInput input) {
+  Future<GetTransactionsOutput> getTransactions(GetTransactionsInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<MergeTvcOutput> mergeTvc(MergeTvcInput input) {
+  Future<MergeTvcOutput> mergeTvc(MergeTvcInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<PackIntoCellOutput> packIntoCell(PackIntoCellInput input) {
+  Future<PackIntoCellOutput> packIntoCell(PackIntoCellInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<RunLocalOutput> runLocal(RunLocalInput input) {
+  Future<RunLocalOutput> runLocal(RunLocalInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SendExternalMessageOutput> sendExternalMessage(
+  Future<SendExternalMessageOutput> sendExternalMessage(
     SendExternalMessageInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SendExternalMessageDelayedOutput> sendExternalMessageDelayed(
+  Future<SendExternalMessageDelayedOutput> sendExternalMessageDelayed(
     SendExternalMessageDelayedInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SendMessageOutput> sendMessage(SendMessageInput input) {
+  Future<SendMessageOutput> sendMessage(SendMessageInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SendMessageDelayedOutput> sendMessageDelayed(
+  Future<SendMessageDelayedOutput> sendMessageDelayed(
     SendMessageDelayedInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SendUnsignedExternalMessageOutput> sendUnsignedExternalMessage(
+  Future<SendUnsignedExternalMessageOutput> sendUnsignedExternalMessage(
     SendUnsignedExternalMessageInput input,
   ) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SetCodeSaltOutput> setCodeSalt(SetCodeSaltInput input) {
+  Future<SetCodeSaltOutput> setCodeSalt(SetCodeSaltInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SignDataOutput> signData(SignDataInput input) {
+  Future<SignDataOutput> signData(SignDataInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SignDataRawOutput> signDataRaw(SignDataRawInput input) {
+  Future<SignDataRawOutput> signDataRaw(SignDataRawInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<SplitTvcOutput> splitTvc(SplitTvcInput input) {
+  Future<SplitTvcOutput> splitTvc(SplitTvcInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<ContractUpdatesSubscription> subscribe(SubscribeInput input) {
+  Future<ContractUpdatesSubscription> subscribe(SubscribeInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<UnpackFromCellOutput> unpackFromCell(UnpackFromCellInput input) {
+  Future<UnpackFromCellOutput> unpackFromCell(UnpackFromCellInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<UnpackInitDataOutput> unpackInitData(UnpackInitDataInput input) {
+  Future<UnpackInitDataOutput> unpackInitData(UnpackInitDataInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<void> unsubscribe(UnsubscribeInput input) {
+  Future<void> unsubscribe(UnsubscribeInput input) {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<void> unsubscribeAll() {
+  Future<void> unsubscribeAll() {
     throw UnimplementedError();
   }
 
   @override
-  FutureOr<VerifySignatureOutput> verifySignature(VerifySignatureInput input) {
+  Future<VerifySignatureOutput> verifySignature(VerifySignatureInput input) {
     throw UnimplementedError();
   }
 
