@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-09-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.1.6`](#nekoton_webview---v016)
+ - [`nekoton_webview_example` - `v1.6.0`](#nekoton_webview_example---v160)
+
+---
+
+#### `nekoton_webview` - `v0.1.6`
+
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+#### `nekoton_webview_example` - `v1.6.0`
+
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.6
+
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+
 ## 2023-09-05
 
 ### Changes
