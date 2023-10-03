@@ -160,10 +160,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_inappwebview
-      sha256: "43319594a48b298b77c8ed9d2c91b83cbcb2bcb7c09761b33203eca58abaca7e"
+      sha256: d198297060d116b94048301ee6749cd2e7d03c1f2689783f52d210a6b7aba350
       url: "https://pub.dev"
     source: hosted
-    version: "5.7.2"
+    version: "5.8.0"
   flutter_localizations:
     dependency: "direct main"
     description: flutter
