@@ -1,3 +1,10 @@
+## 1.7.0
+
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
 ## 1.6.0
 
  - **FEAT**: add actions to call provider (#23).
