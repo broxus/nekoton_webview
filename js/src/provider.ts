@@ -44,6 +44,7 @@ export function setGlobalProvider(
     providerInstance: NekotonInpageProvider
 ): void {
     ;(window as Record<string, any>).__ever = providerInstance
+    ;(window as Record<string, any>).isNativeEverApp = true
     window.dispatchEvent(new Event('ever#initialized'))
 
     // TODO: remove later
