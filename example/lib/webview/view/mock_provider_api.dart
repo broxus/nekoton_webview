@@ -265,4 +265,21 @@ class MockProviderApi extends ProviderApi {
   Future<VerifySignatureOutput> verifySignature(VerifySignatureInput input) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<AddNetworkOutput> addNetwork(AddNetworkInput input) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<ChangeNetworkOutput> changeNetwork(ChangeNetworkInput input) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<ComputeStorageFeeOutput> computeStorageFee(
+    ComputeStorageFeeInput input,
+  ) {
+    throw UnimplementedError();
+  }
 }

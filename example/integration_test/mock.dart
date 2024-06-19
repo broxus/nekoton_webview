@@ -256,4 +256,21 @@ class MockProviderApi extends ProviderApi {
   dynamic call(String method, dynamic params) {
     return handler(method, params);
   }
+
+  @override
+  Future<AddNetworkOutput> addNetwork(AddNetworkInput input) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<ChangeNetworkOutput> changeNetwork(ChangeNetworkInput input) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<ComputeStorageFeeOutput> computeStorageFee(
+    ComputeStorageFeeInput input,
+  ) {
+    throw UnimplementedError();
+  }
 }
