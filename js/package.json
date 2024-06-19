@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/events": "3.0.1",
-    "everscale-inpage-provider": "^0.3.62",
+    "everscale-inpage-provider": "0.3.65",
     "ts-loader": "9.4.4",
     "typescript": "5.2.2",
     "webpack-cli": "5.1.4"

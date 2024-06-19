@@ -53,6 +53,13 @@ abstract class ProviderApi {
     GetFullContractStateInput input,
   );
 
+  ///Compute storage fee
+  ///---
+  ///Required permissions: `basic`
+  Future<ComputeStorageFeeOutput> computeStorageFee(
+    ComputeStorageFeeInput input,
+  );
+
   ///Requests accounts with specified code hash
   ///---
   ///Required permissions: `basic`
@@ -308,6 +315,22 @@ abstract class ProviderApi {
     SendExternalMessageDelayedInput input,
   );
 
+  ///Request user to add a new network.
+  ///Shows an approval window to the user.
+  ///---
+  ///Required permissions: `basic`
+  Future<AddNetworkOutput> addNetwork(
+    AddNetworkInput input,
+  );
+
+  ///Request user to change selected network.
+  ///Shows an approval window to the user.
+  ///---
+  ///Required permissions: `basic`
+  Future<ChangeNetworkOutput> changeNetwork(
+    ChangeNetworkInput input,
+  );
+
   dynamic call(String method, dynamic params) {
     switch (method) {
       case 'requestPermissions':
@@ -333,6 +356,10 @@ abstract class ProviderApi {
       case 'getFullContractState':
         return getFullContractState(
           GetFullContractStateInput.fromJson(params as Map<String, dynamic>),
+        );
+      case 'computeStorageFee':
+        return computeStorageFee(
+          ComputeStorageFeeInput.fromJson(params as Map<String, dynamic>),
         );
       case 'getAccountsByCodeHash':
         return getAccountsByCodeHash(
@@ -479,6 +506,14 @@ abstract class ProviderApi {
         return sendExternalMessageDelayed(
           SendExternalMessageDelayedInput.fromJson(
               params as Map<String, dynamic>),
+        );
+      case 'addNetwork':
+        return addNetwork(
+          AddNetworkInput.fromJson(params as Map<String, dynamic>),
+        );
+      case 'changeNetwork':
+        return changeNetwork(
+          ChangeNetworkInput.fromJson(params as Map<String, dynamic>),
         );
 
       default:
