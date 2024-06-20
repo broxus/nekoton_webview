@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-06-20
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.1.8-dev.0`](#nekoton_webview---v018-dev0)
+ - [`nekoton_webview_example` - `v1.8.0-dev.0`](#nekoton_webview_example---v180-dev0)
+
+---
+
+#### `nekoton_webview` - `v0.1.8-dev.0`
+
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+#### `nekoton_webview_example` - `v1.8.0-dev.0`
+
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.8-dev.0
+
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+
 ## 2023-11-23
 
 ### Changes
