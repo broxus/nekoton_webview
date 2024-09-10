@@ -21,7 +21,7 @@ class WebviewPage extends StatelessWidget {
 
             await controller.loadUrl(
               urlRequest: URLRequest(
-                url: Uri.parse('https://app.flatqube.io/swap'),
+                url: WebUri('https://app.flatqube.io/swap'),
               ),
             );
           },
