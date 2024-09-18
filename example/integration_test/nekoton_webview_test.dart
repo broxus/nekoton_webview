@@ -13,6 +13,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
+    // ignore: deprecated_member_use
     AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
   }
 
