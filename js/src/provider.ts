@@ -34,6 +34,7 @@ interface TVMProviderDetail {
 
 interface TVMProviderInfo {
     name: string;
+    rdns: string;
 }
 
 export const initializeProvider = ({
@@ -57,18 +58,16 @@ export const initializeProvider = ({
 export function setGlobalProvider(
     providerInstance: NekotonInpageProvider
 ): void {
-    ;(window as Record<string, any>).__ever = providerInstance
+    // TODO(komarov): make it configurable?
+    ;(window as Record<string, any>).__sparx = providerInstance
     ;(window as Record<string, any>).isNativeEverApp = true
-    window.dispatchEvent(new Event('ever#initialized'))
-
-    // TODO: remove later
-    ;(window as Record<string, any>).ton = providerInstance
-    window.dispatchEvent(new Event('ton#initialized'))
+    window.dispatchEvent(new Event('sparx#initialized'))
 
     const announceEvent = new CustomEvent<TVMProviderDetail>('tvm:announceProvider', {
         detail: Object.freeze({
             info: {
                 name: 'SparX Wallet',
+                rdns: 'com.broxus.sparx.app',
             },
             provider: providerInstance,
         }),
