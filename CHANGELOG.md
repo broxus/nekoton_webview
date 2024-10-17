@@ -15,6 +15,64 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`nekoton_webview` - `v0.1.8-dev.3`](#nekoton_webview---v018-dev3)
+ - [`nekoton_webview_example` - `v1.8.0-dev.3`](#nekoton_webview_example---v180-dev3)
+
+---
+
+#### `nekoton_webview` - `v0.1.8-dev.3`
+
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+#### `nekoton_webview_example` - `v1.8.0-dev.3`
+
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.8-dev.3
+
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+
+## 2024-10-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`nekoton_webview` - `v0.1.8-dev.2`](#nekoton_webview---v018-dev2)
  - [`nekoton_webview_example` - `v1.8.0-dev.2`](#nekoton_webview_example---v180-dev2)
 
