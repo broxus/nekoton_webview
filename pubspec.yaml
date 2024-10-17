@@ -1,6 +1,6 @@
 name: nekoton_webview
 description: Flutter webview nekoton inpage provider bindings
-version: 0.1.8-dev.1
+version: 0.1.8-dev.2
 repository: https://github.com/broxus/nekoton_webview
 
 environment:
