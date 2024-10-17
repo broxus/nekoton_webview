@@ -8,10 +8,10 @@
     "clean": "rm -rf node_modules"
   },
   "devDependencies": {
-    "@types/events": "3.0.1",
-    "everscale-inpage-provider": "0.3.65",
-    "ts-loader": "9.4.4",
-    "typescript": "5.2.2",
+    "@types/events": "3.0.3",
+    "everscale-inpage-provider": "0.3.66",
+    "ts-loader": "9.5.1",
+    "typescript": "5.6.3",
     "webpack-cli": "5.1.4"
   },
   "dependencies": {

@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { EventEmitter } from 'events';
 import { PendingJsonRpcResponse } from './jrpc';
 export type Maybe<T> = Partial<T> | null | undefined;
