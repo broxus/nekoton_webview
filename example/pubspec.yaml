@@ -1,6 +1,6 @@
 name: nekoton_webview_example
 description: Nekoton webview example
-version: 1.8.0-dev.3
+version: 1.8.0-dev.4
 publish_to: none
 
 environment:
