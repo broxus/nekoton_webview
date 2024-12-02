@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-12-02
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.1.8-dev.4`](#nekoton_webview---v018-dev4)
+ - [`nekoton_webview_example` - `v1.8.0-dev.4`](#nekoton_webview_example---v180-dev4)
+
+---
+
+#### `nekoton_webview` - `v0.1.8-dev.4`
+
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+#### `nekoton_webview_example` - `v1.8.0-dev.4`
+
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.8-dev.4
+
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+
 ## 2024-10-17
 
 ### Changes
