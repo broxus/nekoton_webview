@@ -41,7 +41,7 @@ void main() {
       final controller = await controllerCompleter.future;
 
       expect(
-        await controller.evaluateJavascript(source: 'window.__ever'),
+        await controller.evaluateJavascript(source: 'window.__sparx'),
         isNotNull,
       );
     });
@@ -71,7 +71,7 @@ void main() {
       final controller = await controllerCompleter.future;
 
       await controller.evaluateJavascript(
-        source: '''window.__ever.request({method: '$methodName'})''',
+        source: '''window.__sparx.request({method: '$methodName'})''',
       );
 
       expect(await methodCompleter.future, equals(methodName));
