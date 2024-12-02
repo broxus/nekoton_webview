@@ -58,6 +58,10 @@ export const initializeProvider = ({
 export function setGlobalProvider(
     providerInstance: NekotonInpageProvider
 ): void {
+    // TODO(komarov): remove this
+    ;(window as Record<string, any>).__ever = providerInstance
+    window.dispatchEvent(new Event('ever#initialized'))
+
     // TODO(komarov): make it configurable?
     ;(window as Record<string, any>).__sparx = providerInstance
     ;(window as Record<string, any>).isNativeEverApp = true
