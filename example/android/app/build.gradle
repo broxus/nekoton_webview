@@ -47,7 +47,28 @@ android {
         versionName flutterVersionName
     }
 
+    flavorDimensions "default"
+    productFlavors {
+        production {
+            dimension "default"
+            applicationIdSuffix ""
+        }
+        staging {
+            dimension "default"
+            applicationIdSuffix ""
+        }
+        development {
+            dimension "default"
+            applicationIdSuffix ""
+        }
+    }
+
     buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
         debug {
             signingConfig signingConfigs.debug
         }

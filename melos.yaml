@@ -32,7 +32,7 @@ scripts:
       dirExists: test
 
   test:integration:
-    exec: "flutter test integration_test"
+    exec: "flutter test --flavor development integration_test"
     description: Run Flutter teintegration teststs for a specific package in this project.
     concurrency: 1
     failFast: true
