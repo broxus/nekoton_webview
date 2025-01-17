@@ -1,3 +1,13 @@
+## 1.8.0-dev.5
+
+ - **FIX**: tests.
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
 ## 1.8.0-dev.4
 
  - **FIX**: rollback `window.__ever` variable & initialization event.
