@@ -1,3 +1,7 @@
+## 1.8.0
+
+ - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.
+
 ## 1.8.0-dev.5
 
  - **FIX**: tests.
