@@ -6,9 +6,10 @@ part 'network_config.g.dart';
 @JsonSerializable()
 class NetworkConfig {
   const NetworkConfig(
-      this.symbol, this.explorerBaseUrl, this.tokensManifestUrl);
+      this.symbol, this.decimals, this.explorerBaseUrl, this.tokensManifestUrl);
 
   final String? symbol;
+  final num? decimals;
   final String? explorerBaseUrl;
   final String? tokensManifestUrl;
 
