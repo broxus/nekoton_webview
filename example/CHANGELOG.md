@@ -1,3 +1,14 @@
+## 1.10.0
+
+ - **FIX**: tests.
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FEAT**: update everscale-inpage-provider to v0.5.0 and add support for ignoring transaction tree simulation errors.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
 ## 1.9.0
 
  - **FIX**: tests.
