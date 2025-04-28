@@ -26,7 +26,7 @@ jobs:
   #     flutter_version: '3.29.2'
 
   android_integration_test:
-    uses: broxus/flutter_templates/.github/workflows/android-integration-test.yaml@v3
+    uses: broxus/flutter_templates/.github/workflows/android-integration-test.yaml@v4
     with:
       working-directory: ./example
       flutter_version: '3.29.2'
