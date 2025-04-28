@@ -91,6 +91,7 @@ export 'decrypt_data_input.dart';
 export 'decrypt_data_output.dart';
 export 'estimate_fees_input.dart';
 export 'estimate_fees_output.dart';
+export 'ignore_transaction_tree_simulation_error.dart';
 export 'send_message_input.dart';
 export 'send_message_output.dart';
 export 'send_message_delayed_input.dart';

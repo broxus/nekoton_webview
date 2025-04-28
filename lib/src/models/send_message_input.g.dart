@@ -16,6 +16,14 @@ SendMessageInput _$SendMessageInputFromJson(Map<String, dynamic> json) =>
           ? null
           : FunctionCall.fromJson(json['payload'] as Map<String, dynamic>),
       json['stateInit'] as String?,
+      (json['ignoredComputePhaseCodes'] as List<dynamic>?)
+          ?.map((e) => IgnoreTransactionTreeSimulationError.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      (json['ignoredActionPhaseCodes'] as List<dynamic>?)
+          ?.map((e) => IgnoreTransactionTreeSimulationError.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$SendMessageInputToJson(SendMessageInput instance) =>
@@ -26,4 +34,8 @@ Map<String, dynamic> _$SendMessageInputToJson(SendMessageInput instance) =>
       'bounce': instance.bounce,
       'payload': instance.payload?.toJson(),
       'stateInit': instance.stateInit,
+      'ignoredComputePhaseCodes':
+          instance.ignoredComputePhaseCodes?.map((e) => e.toJson()).toList(),
+      'ignoredActionPhaseCodes':
+          instance.ignoredActionPhaseCodes?.map((e) => e.toJson()).toList(),
     };

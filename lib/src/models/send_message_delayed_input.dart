@@ -5,8 +5,15 @@ part 'send_message_delayed_input.g.dart';
 
 @JsonSerializable()
 class SendMessageDelayedInput {
-  const SendMessageDelayedInput(this.sender, this.recipient, this.amount,
-      this.bounce, this.payload, this.stateInit);
+  const SendMessageDelayedInput(
+      this.sender,
+      this.recipient,
+      this.amount,
+      this.bounce,
+      this.payload,
+      this.stateInit,
+      this.ignoredComputePhaseCodes,
+      this.ignoredActionPhaseCodes);
 
   ///Preferred wallet address.
   ///It is the same address as the `accountInteraction.address`, but it must be explicitly provided
@@ -30,6 +37,12 @@ class SendMessageDelayedInput {
   ///Optional base64 encoded TVC
   ///NOTE: If the selected contract do not support this, an error is returned
   final String? stateInit;
+
+  ///Optional compute phase error codes to be ignored during transaction tree simulation
+  final List<IgnoreTransactionTreeSimulationError>? ignoredComputePhaseCodes;
+
+  ///Optional action phase error codes to be ignored during transaction tree simulation
+  final List<IgnoreTransactionTreeSimulationError>? ignoredActionPhaseCodes;
 
   factory SendMessageDelayedInput.fromJson(Map<String, dynamic> json) =>
       _$SendMessageDelayedInputFromJson(json);
