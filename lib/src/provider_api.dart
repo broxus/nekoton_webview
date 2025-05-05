@@ -331,6 +331,13 @@ abstract class ProviderApi {
     ChangeNetworkInput input,
   );
 
+  ///Execute getter of the contract
+  ///---
+  ///Required permissions: `basic`
+  Future<RunGetterOutput> runGetter(
+    RunGetterInput input,
+  );
+
   dynamic call(String method, dynamic params) {
     switch (method) {
       case 'requestPermissions':
@@ -514,6 +521,10 @@ abstract class ProviderApi {
       case 'changeNetwork':
         return changeNetwork(
           ChangeNetworkInput.fromJson(params as Map<String, dynamic>),
+        );
+      case 'runGetter':
+        return runGetter(
+          RunGetterInput.fromJson(params as Map<String, dynamic>),
         );
 
       default:

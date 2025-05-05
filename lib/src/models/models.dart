@@ -115,4 +115,7 @@ export 'network.dart';
 export 'add_network_output.dart';
 export 'change_network_input.dart';
 export 'change_network_output.dart';
+export 'getter_call.dart';
+export 'run_getter_input.dart';
+export 'run_getter_output.dart';
 export 'contract_state.dart';
