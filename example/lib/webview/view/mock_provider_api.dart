@@ -282,4 +282,9 @@ class MockProviderApi extends ProviderApi {
   ) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<RunGetterOutput> runGetter(RunGetterInput input) async {
+    throw UnimplementedError();
+  }
 }
