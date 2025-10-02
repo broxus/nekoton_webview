@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-10-02
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.1.12`](#nekoton_webview---v0112)
+ - [`nekoton_webview_example` - `v1.12.0`](#nekoton_webview_example---v1120)
+
+---
+
+#### `nekoton_webview` - `v0.1.12`
+
+ - **FIX**: tests.
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: add `everscale-inpage-provider` v0.6.3 support.
+ - **FEAT**(EWM-514): update everscale-inpage-provider to v0.6.1 and add RunGetterInput and RunGetterOutput models.
+ - **FEAT**: update everscale-inpage-provider to v0.5.0 and add support for ignoring transaction tree simulation errors.
+ - **FEAT**: update everscale-inpage-provider to v0.4.1 and add decimals field to NetworkConfig model.
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+#### `nekoton_webview_example` - `v1.12.0`
+
+ - **FIX**: tests.
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FEAT**: update everscale-inpage-provider to v0.5.0 and add support for ignoring transaction tree simulation errors.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+
+## 0.1.12
+
+ - **FIX**: tests.
+ - **FIX**: rollback `window.__ever` variable & initialization event.
+ - **FIX**: add mobile identify flag to provider (#32).
+ - **FIX**: `FullContractState` codegen (#29).
+ - **FIX**: calling nekoton events (#27).
+ - **FIX**: downgrade Wandalen/wretry.action (#13).
+ - **FEAT**: add `everscale-inpage-provider` v0.6.3 support.
+ - **FEAT**(EWM-514): update everscale-inpage-provider to v0.6.1 and add RunGetterInput and RunGetterOutput models.
+ - **FEAT**: update everscale-inpage-provider to v0.5.0 and add support for ignoring transaction tree simulation errors.
+ - **FEAT**: update everscale-inpage-provider to v0.4.1 and add decimals field to NetworkConfig model.
+ - **FEAT**(EWM-353): tvm provider announcer.
+ - **FEAT**: update inpage provider version (#34).
+ - **FEAT**: support other logging versions (#25).
+ - **FEAT**: add actions to call provider (#23).
+ - **FEAT**: use flutter templates repository (#18).
+ - **FEAT**: provider api dart bindings.
+ - **FEAT**: add example app.
+ - **FEAT**: mvp.
+ - **DOCS**: fix controller init param (#22).
+
+
 ## 2025-05-05
 
 ### Changes
