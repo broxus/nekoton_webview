@@ -5,8 +5,8 @@ part 'run_getter_input.g.dart';
 
 @JsonSerializable()
 class RunGetterInput {
-  const RunGetterInput(
-      this.address, this.cachedState, this.getterCall, this.withSignatureId);
+  const RunGetterInput(this.address, this.cachedState, this.getterCall,
+      this.withSignatureId, this.libraries);
 
   ///Contract address
   final String address;
@@ -22,6 +22,9 @@ class RunGetterInput {
   ///- If `false`, forces signature check to ignore any signature id.
   ///- If `number`, uses the specified number as a signature id.
   final Object? withSignatureId;
+
+  ///Optional libraries map
+  final Map<String, String>? libraries;
 
   factory RunGetterInput.fromJson(Map<String, dynamic> json) =>
       _$RunGetterInputFromJson(json);

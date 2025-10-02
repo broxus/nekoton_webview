@@ -15,6 +15,9 @@ RunGetterInput _$RunGetterInputFromJson(Map<String, dynamic> json) =>
               json['cachedState'] as Map<String, dynamic>),
       GetterCall.fromJson(json['getterCall'] as Map<String, dynamic>),
       json['withSignatureId'],
+      (json['libraries'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
     );
 
 Map<String, dynamic> _$RunGetterInputToJson(RunGetterInput instance) =>
@@ -23,4 +26,5 @@ Map<String, dynamic> _$RunGetterInputToJson(RunGetterInput instance) =>
       'cachedState': instance.cachedState?.toJson(),
       'getterCall': instance.getterCall.toJson(),
       'withSignatureId': instance.withSignatureId,
+      'libraries': instance.libraries,
     };

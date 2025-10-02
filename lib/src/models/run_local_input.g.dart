@@ -16,6 +16,9 @@ RunLocalInput _$RunLocalInputFromJson(Map<String, dynamic> json) =>
       json['responsible'] as bool?,
       FunctionCall.fromJson(json['functionCall'] as Map<String, dynamic>),
       json['withSignatureId'],
+      (json['libraries'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
     );
 
 Map<String, dynamic> _$RunLocalInputToJson(RunLocalInput instance) =>
@@ -25,4 +28,5 @@ Map<String, dynamic> _$RunLocalInputToJson(RunLocalInput instance) =>
       'responsible': instance.responsible,
       'functionCall': instance.functionCall.toJson(),
       'withSignatureId': instance.withSignatureId,
+      'libraries': instance.libraries,
     };

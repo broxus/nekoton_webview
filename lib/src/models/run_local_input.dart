@@ -6,7 +6,7 @@ part 'run_local_input.g.dart';
 @JsonSerializable()
 class RunLocalInput {
   const RunLocalInput(this.address, this.cachedState, this.responsible,
-      this.functionCall, this.withSignatureId);
+      this.functionCall, this.withSignatureId, this.libraries);
 
   ///Contract address
   final String address;
@@ -26,6 +26,9 @@ class RunLocalInput {
   ///- If `false`, forces signature check to ignore any signature id.
   ///- If `number`, uses the specified number as a signature id.
   final Object? withSignatureId;
+
+  ///Optional libraries map
+  final Map<String, String>? libraries;
 
   factory RunLocalInput.fromJson(Map<String, dynamic> json) =>
       _$RunLocalInputFromJson(json);
