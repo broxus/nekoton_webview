@@ -7,19 +7,19 @@ part of 'message_status_updated_event.dart';
 // **************************************************************************
 
 MessageStatusUpdatedEvent _$MessageStatusUpdatedEventFromJson(
-        Map<String, dynamic> json) =>
-    MessageStatusUpdatedEvent(
-      json['address'] as String,
-      json['hash'] as String,
-      json['transaction'] == null
-          ? null
-          : Transaction.fromJson(json['transaction'] as Map<String, dynamic>),
-    );
+  Map<String, dynamic> json,
+) => MessageStatusUpdatedEvent(
+  json['address'] as String,
+  json['hash'] as String,
+  json['transaction'] == null
+      ? null
+      : Transaction.fromJson(json['transaction'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$MessageStatusUpdatedEventToJson(
-        MessageStatusUpdatedEvent instance) =>
-    <String, dynamic>{
-      'address': instance.address,
-      'hash': instance.hash,
-      'transaction': instance.transaction?.toJson(),
-    };
+  MessageStatusUpdatedEvent instance,
+) => <String, dynamic>{
+  'address': instance.address,
+  'hash': instance.hash,
+  'transaction': instance.transaction?.toJson(),
+};

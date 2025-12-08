@@ -6,17 +6,18 @@ part 'transaction.g.dart';
 @JsonSerializable()
 class Transaction {
   const Transaction(
-      this.id,
-      this.prevTransactionId,
-      this.createdAt,
-      this.aborted,
-      this.exitCode,
-      this.resultCode,
-      this.origStatus,
-      this.endStatus,
-      this.totalFees,
-      this.inMessage,
-      this.outMessages);
+    this.id,
+    this.prevTransactionId,
+    this.createdAt,
+    this.aborted,
+    this.exitCode,
+    this.resultCode,
+    this.origStatus,
+    this.endStatus,
+    this.totalFees,
+    this.inMessage,
+    this.outMessages,
+  );
 
   final TransactionId id;
   final TransactionId? prevTransactionId;

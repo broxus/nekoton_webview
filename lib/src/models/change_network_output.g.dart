@@ -14,7 +14,5 @@ ChangeNetworkOutput _$ChangeNetworkOutputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ChangeNetworkOutputToJson(
-        ChangeNetworkOutput instance) =>
-    <String, dynamic>{
-      'network': instance.network?.toJson(),
-    };
+  ChangeNetworkOutput instance,
+) => <String, dynamic>{'network': instance.network?.toJson()};

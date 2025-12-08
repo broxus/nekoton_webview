@@ -12,7 +12,8 @@ RunLocalInput _$RunLocalInputFromJson(Map<String, dynamic> json) =>
       json['cachedState'] == null
           ? null
           : FullContractState.fromJson(
-              json['cachedState'] as Map<String, dynamic>),
+              json['cachedState'] as Map<String, dynamic>,
+            ),
       json['responsible'] as bool?,
       FunctionCall.fromJson(json['functionCall'] as Map<String, dynamic>),
       json['withSignatureId'],

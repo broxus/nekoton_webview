@@ -7,9 +7,7 @@ abstract class ProviderApi {
   ///Will overwrite already existing permissions
   ///---
   ///Required permissions: none
-  Future<PermissionsPartial> requestPermissions(
-    RequestPermissionsInput input,
-  );
+  Future<PermissionsPartial> requestPermissions(RequestPermissionsInput input);
 
   ///Updates `accountInteraction` permission value
   ///---
@@ -25,16 +23,12 @@ abstract class ProviderApi {
   ///Can also be used to update subscriptions
   ///---
   ///Required permissions: `basic`
-  Future<ContractUpdatesSubscription> subscribe(
-    SubscribeInput input,
-  );
+  Future<ContractUpdatesSubscription> subscribe(SubscribeInput input);
 
   ///Fully unsubscribe from specific contract updates
   ///---
   ///Required permissions: none
-  Future<void> unsubscribe(
-    UnsubscribeInput input,
-  );
+  Future<void> unsubscribe(UnsubscribeInput input);
 
   ///Fully unsubscribe from all contracts
   ///---
@@ -70,38 +64,28 @@ abstract class ProviderApi {
   ///Requests contract transactions
   ///---
   ///Required permissions: `basic`
-  Future<GetTransactionsOutput> getTransactions(
-    GetTransactionsInput input,
-  );
+  Future<GetTransactionsOutput> getTransactions(GetTransactionsInput input);
 
   ///Fetches transaction by the exact hash
   ///---
   ///Required permissions: `basic`
-  Future<GetTransactionOutput> getTransaction(
-    GetTransactionInput input,
-  );
+  Future<GetTransactionOutput> getTransaction(GetTransactionInput input);
 
   ///Searches transaction by filters
   ///NOTE: at least one filter must be specified
   ///---
   ///Required permissions: `basic`
-  Future<FindTransactionOutput> findTransaction(
-    FindTransactionInput input,
-  );
+  Future<FindTransactionOutput> findTransaction(FindTransactionInput input);
 
   ///Executes only a compute phase locally
   ///---
   ///Required permissions: `basic`
-  Future<RunLocalOutput> runLocal(
-    RunLocalInput input,
-  );
+  Future<RunLocalOutput> runLocal(RunLocalInput input);
 
   ///Executes all transaction phases locally, producing a new state
   ///---
   ///Required permissions: `basic`
-  Future<ExecuteLocalOutput> executeLocal(
-    ExecuteLocalInput input,
-  );
+  Future<ExecuteLocalOutput> executeLocal(ExecuteLocalInput input);
 
   ///Calculates contract address from code and init params
   ///---
@@ -120,101 +104,73 @@ abstract class ProviderApi {
   ///Decodes initial contract data using the specified ABI
   ///---
   ///Required permissions: `basic`
-  Future<UnpackInitDataOutput> unpackInitData(
-    UnpackInitDataInput input,
-  );
+  Future<UnpackInitDataOutput> unpackInitData(UnpackInitDataInput input);
 
   ///Computes hash of base64 encoded BOC
   ///---
   ///Required permissions: `basic`
-  Future<GetBocHashOutput> getBocHash(
-    GetBocHashInput input,
-  );
+  Future<GetBocHashOutput> getBocHash(GetBocHashInput input);
 
   ///Creates base64 encoded BOC
   ///---
   ///Required permissions: `basic`
-  Future<PackIntoCellOutput> packIntoCell(
-    PackIntoCellInput input,
-  );
+  Future<PackIntoCellOutput> packIntoCell(PackIntoCellInput input);
 
   ///Decodes base64 encoded BOC
   ///---
   ///Required permissions: `basic`
-  Future<UnpackFromCellOutput> unpackFromCell(
-    UnpackFromCellInput input,
-  );
+  Future<UnpackFromCellOutput> unpackFromCell(UnpackFromCellInput input);
 
   ///Extracts public key from raw account state
   ///**NOTE:** can only be used on contracts which are deployed and has `pubkey` header
   ///---
   ///Required permissions: `basic`
-  Future<ExtractPublicKeyOutput> extractPublicKey(
-    ExtractPublicKeyInput input,
-  );
+  Future<ExtractPublicKeyOutput> extractPublicKey(ExtractPublicKeyInput input);
 
   ///Converts base64 encoded contract code into tvc with default init data
   ///---
   ///Required permissions: `basic`
-  Future<CodeToTvcOutput> codeToTvc(
-    CodeToTvcInput input,
-  );
+  Future<CodeToTvcOutput> codeToTvc(CodeToTvcInput input);
 
   ///Merges base64 encoded contract code and state into a tvc
   ///---
   ///Required permissions: `basic`
-  Future<MergeTvcOutput> mergeTvc(
-    MergeTvcInput input,
-  );
+  Future<MergeTvcOutput> mergeTvc(MergeTvcInput input);
 
   ///Splits base64 encoded state init into code and data
   ///---
   ///Required permissions: `basic`
-  Future<SplitTvcOutput> splitTvc(
-    SplitTvcInput input,
-  );
+  Future<SplitTvcOutput> splitTvc(SplitTvcInput input);
 
   ///Inserts salt into code
   ///---
   ///Required permissions: `basic`
-  Future<SetCodeSaltOutput> setCodeSalt(
-    SetCodeSaltInput input,
-  );
+  Future<SetCodeSaltOutput> setCodeSalt(SetCodeSaltInput input);
 
   ///Retrieves salt from code. Returns undefined if code doesn't contain salt
   ///---
   ///Required permissions: `basic`
-  Future<GetCodeSaltOutput> getCodeSalt(
-    GetCodeSaltInput input,
-  );
+  Future<GetCodeSaltOutput> getCodeSalt(GetCodeSaltInput input);
 
   ///Creates internal message body
   ///---
   ///Required permissions: `basic`
-  Future<EncodeInternalInputOutput> encodeInternalInput(
-    FunctionCall input,
-  );
+  Future<EncodeInternalInputOutput> encodeInternalInput(FunctionCall input);
 
   ///Decodes body of incoming message
   ///---
   ///Required permissions: `basic`
-  Future<DecodeInputOutput?> decodeInput(
-    DecodeInputInput input,
-  );
+  Future<DecodeInputOutput?> decodeInput(DecodeInputInput input);
 
   ///Decodes body of outgoing message
   ///---
   ///Required permissions: `basic`
-  Future<DecodeOutputOutput?> decodeOutput(
-    DecodeOutputInput input,
-  );
+  Future<DecodeOutputOutput?> decodeOutput(DecodeOutputInput input);
 
   ///Decodes body of event message
   ///---
   ///Required permissions: `basic`
-  Future<DecodeEventOutput?> decodeEvent(
-    DecodeEventInput input,
-  );
+  Future<DecodeEventOutput?> decodeEvent(DecodeEventInput input);
 
   ///Decodes function call
   ///---
@@ -233,9 +189,7 @@ abstract class ProviderApi {
   ///Checks if a specific data hash was signed with the specified key
   ///---
   ///Requires permissions: `basic`
-  Future<VerifySignatureOutput> verifySignature(
-    VerifySignatureInput input,
-  );
+  Future<VerifySignatureOutput> verifySignature(VerifySignatureInput input);
 
   ///Sends an unsigned external message to the contract
   ///---
@@ -247,53 +201,39 @@ abstract class ProviderApi {
   ///Adds asset to the selected account
   ///---
   ///Requires permissions: `accountInteraction`
-  Future<AddAssetOutput> addAsset(
-    AddAssetInput input,
-  );
+  Future<AddAssetOutput> addAsset(AddAssetInput input);
 
   ///Signs arbitrary data.
   ///NOTE: hashes data before signing. Use `signDataRaw` to sign without hash.
   ///---
   ///Requires permissions: `accountInteraction`
-  Future<SignDataOutput> signData(
-    SignDataInput input,
-  );
+  Future<SignDataOutput> signData(SignDataInput input);
 
   ///Signs arbitrary data without hashing it
   ///---
   ///Requires permissions: `accountInteraction`
-  Future<SignDataRawOutput> signDataRaw(
-    SignDataRawInput input,
-  );
+  Future<SignDataRawOutput> signDataRaw(SignDataRawInput input);
 
   ///Encrypts arbitrary data with specified algorithm for each specified recipient
   ///---
   ///Requires permissions: `accountInteraction`
-  Future<EncryptDataOutput> encryptData(
-    EncryptDataInput input,
-  );
+  Future<EncryptDataOutput> encryptData(EncryptDataInput input);
 
   ///Decrypts encrypted data
   ///---
   ///Requires permissions: `accountInteraction`
-  Future<DecryptDataOutput> decryptData(
-    DecryptDataInput input,
-  );
+  Future<DecryptDataOutput> decryptData(DecryptDataInput input);
 
   ///Calculates transaction fees
   ///---
   ///Required permissions: `accountInteraction`
-  Future<EstimateFeesOutput> estimateFees(
-    EstimateFeesInput input,
-  );
+  Future<EstimateFeesOutput> estimateFees(EstimateFeesInput input);
 
   ///Sends an internal message from the user account.
   ///Shows an approval window to the user.
   ///---
   ///Required permissions: `accountInteraction`
-  Future<SendMessageOutput> sendMessage(
-    SendMessageInput input,
-  );
+  Future<SendMessageOutput> sendMessage(SendMessageInput input);
 
   ///Sends an internal message from the user account without waiting for the transaction.
   ///Shows an approval window to the user.
@@ -319,24 +259,18 @@ abstract class ProviderApi {
   ///Shows an approval window to the user.
   ///---
   ///Required permissions: `basic`
-  Future<AddNetworkOutput> addNetwork(
-    AddNetworkInput input,
-  );
+  Future<AddNetworkOutput> addNetwork(AddNetworkInput input);
 
   ///Request user to change selected network.
   ///Shows an approval window to the user.
   ///---
   ///Required permissions: `basic`
-  Future<ChangeNetworkOutput> changeNetwork(
-    ChangeNetworkInput input,
-  );
+  Future<ChangeNetworkOutput> changeNetwork(ChangeNetworkInput input);
 
   ///Execute getter of the contract
   ///---
   ///Required permissions: `basic`
-  Future<RunGetterOutput> runGetter(
-    RunGetterInput input,
-  );
+  Future<RunGetterOutput> runGetter(RunGetterInput input);
 
   dynamic call(String method, dynamic params) {
     switch (method) {
@@ -385,9 +319,7 @@ abstract class ProviderApi {
           FindTransactionInput.fromJson(params as Map<String, dynamic>),
         );
       case 'runLocal':
-        return runLocal(
-          RunLocalInput.fromJson(params as Map<String, dynamic>),
-        );
+        return runLocal(RunLocalInput.fromJson(params as Map<String, dynamic>));
       case 'executeLocal':
         return executeLocal(
           ExecuteLocalInput.fromJson(params as Map<String, dynamic>),
@@ -425,13 +357,9 @@ abstract class ProviderApi {
           CodeToTvcInput.fromJson(params as Map<String, dynamic>),
         );
       case 'mergeTvc':
-        return mergeTvc(
-          MergeTvcInput.fromJson(params as Map<String, dynamic>),
-        );
+        return mergeTvc(MergeTvcInput.fromJson(params as Map<String, dynamic>));
       case 'splitTvc':
-        return splitTvc(
-          SplitTvcInput.fromJson(params as Map<String, dynamic>),
-        );
+        return splitTvc(SplitTvcInput.fromJson(params as Map<String, dynamic>));
       case 'setCodeSalt':
         return setCodeSalt(
           SetCodeSaltInput.fromJson(params as Map<String, dynamic>),
@@ -471,16 +399,13 @@ abstract class ProviderApi {
       case 'sendUnsignedExternalMessage':
         return sendUnsignedExternalMessage(
           SendUnsignedExternalMessageInput.fromJson(
-              params as Map<String, dynamic>),
+            params as Map<String, dynamic>,
+          ),
         );
       case 'addAsset':
-        return addAsset(
-          AddAssetInput.fromJson(params as Map<String, dynamic>),
-        );
+        return addAsset(AddAssetInput.fromJson(params as Map<String, dynamic>));
       case 'signData':
-        return signData(
-          SignDataInput.fromJson(params as Map<String, dynamic>),
-        );
+        return signData(SignDataInput.fromJson(params as Map<String, dynamic>));
       case 'signDataRaw':
         return signDataRaw(
           SignDataRawInput.fromJson(params as Map<String, dynamic>),
@@ -512,7 +437,8 @@ abstract class ProviderApi {
       case 'sendExternalMessageDelayed':
         return sendExternalMessageDelayed(
           SendExternalMessageDelayedInput.fromJson(
-              params as Map<String, dynamic>),
+            params as Map<String, dynamic>,
+          ),
         );
       case 'addNetwork':
         return addNetwork(
@@ -529,7 +455,9 @@ abstract class ProviderApi {
 
       default:
         throw NoSuchMethodError.withInvocation(
-            this, Invocation.method(Symbol(method), [params]));
+          this,
+          Invocation.method(Symbol(method), [params]),
+        );
     }
   }
 }

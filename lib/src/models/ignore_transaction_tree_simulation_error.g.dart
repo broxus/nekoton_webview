@@ -7,15 +7,12 @@ part of 'ignore_transaction_tree_simulation_error.dart';
 // **************************************************************************
 
 IgnoreTransactionTreeSimulationError
-    _$IgnoreTransactionTreeSimulationErrorFromJson(Map<String, dynamic> json) =>
-        IgnoreTransactionTreeSimulationError(
-          json['address'] as String?,
-          json['code'] as num,
-        );
+_$IgnoreTransactionTreeSimulationErrorFromJson(Map<String, dynamic> json) =>
+    IgnoreTransactionTreeSimulationError(
+      json['address'] as String?,
+      json['code'] as num,
+    );
 
 Map<String, dynamic> _$IgnoreTransactionTreeSimulationErrorToJson(
-        IgnoreTransactionTreeSimulationError instance) =>
-    <String, dynamic>{
-      'address': instance.address,
-      'code': instance.code,
-    };
+  IgnoreTransactionTreeSimulationError instance,
+) => <String, dynamic>{'address': instance.address, 'code': instance.code};

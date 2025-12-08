@@ -7,13 +7,7 @@ part of 'transaction_id.dart';
 // **************************************************************************
 
 TransactionId _$TransactionIdFromJson(Map<String, dynamic> json) =>
-    TransactionId(
-      json['lt'] as String,
-      json['hash'] as String,
-    );
+    TransactionId(json['lt'] as String, json['hash'] as String);
 
 Map<String, dynamic> _$TransactionIdToJson(TransactionId instance) =>
-    <String, dynamic>{
-      'lt': instance.lt,
-      'hash': instance.hash,
-    };
+    <String, dynamic>{'lt': instance.lt, 'hash': instance.hash};

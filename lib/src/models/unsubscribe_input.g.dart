@@ -7,11 +7,7 @@ part of 'unsubscribe_input.dart';
 // **************************************************************************
 
 UnsubscribeInput _$UnsubscribeInputFromJson(Map<String, dynamic> json) =>
-    UnsubscribeInput(
-      json['address'] as String,
-    );
+    UnsubscribeInput(json['address'] as String);
 
 Map<String, dynamic> _$UnsubscribeInputToJson(UnsubscribeInput instance) =>
-    <String, dynamic>{
-      'address': instance.address,
-    };
+    <String, dynamic>{'address': instance.address};

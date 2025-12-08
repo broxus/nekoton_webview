@@ -5,8 +5,13 @@ part 'send_unsigned_external_message_input.g.dart';
 
 @JsonSerializable()
 class SendUnsignedExternalMessageInput {
-  const SendUnsignedExternalMessageInput(this.recipient, this.stateInit,
-      this.payload, this.local, this.executorParams);
+  const SendUnsignedExternalMessageInput(
+    this.recipient,
+    this.stateInit,
+    this.payload,
+    this.local,
+    this.executorParams,
+  );
 
   ///Message destination address
   final String recipient;
@@ -25,8 +30,8 @@ class SendUnsignedExternalMessageInput {
   final SendUnsignedExternalMessageInputExecutorParams? executorParams;
 
   factory SendUnsignedExternalMessageInput.fromJson(
-          Map<String, dynamic> json) =>
-      _$SendUnsignedExternalMessageInputFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$SendUnsignedExternalMessageInputFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$SendUnsignedExternalMessageInputToJson(this);

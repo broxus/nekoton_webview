@@ -12,14 +12,16 @@ ExecuteLocalInput _$ExecuteLocalInputFromJson(Map<String, dynamic> json) =>
       json['cachedState'] == null
           ? null
           : FullContractState.fromJson(
-              json['cachedState'] as Map<String, dynamic>),
+              json['cachedState'] as Map<String, dynamic>,
+            ),
       json['stateInit'] as String?,
       json['payload'],
       json['messageHeader'] as Object,
       json['executorParams'] == null
           ? null
           : ExecuteLocalInputExecutorParams.fromJson(
-              json['executorParams'] as Map<String, dynamic>),
+              json['executorParams'] as Map<String, dynamic>,
+            ),
     );
 
 Map<String, dynamic> _$ExecuteLocalInputToJson(ExecuteLocalInput instance) =>

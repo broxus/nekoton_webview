@@ -7,13 +7,9 @@ part of 'verify_signature_output.dart';
 // **************************************************************************
 
 VerifySignatureOutput _$VerifySignatureOutputFromJson(
-        Map<String, dynamic> json) =>
-    VerifySignatureOutput(
-      json['isValid'] as bool,
-    );
+  Map<String, dynamic> json,
+) => VerifySignatureOutput(json['isValid'] as bool);
 
 Map<String, dynamic> _$VerifySignatureOutputToJson(
-        VerifySignatureOutput instance) =>
-    <String, dynamic>{
-      'isValid': instance.isValid,
-    };
+  VerifySignatureOutput instance,
+) => <String, dynamic>{'isValid': instance.isValid};

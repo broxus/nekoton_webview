@@ -7,10 +7,10 @@ part of 'getter_call.dart';
 // **************************************************************************
 
 GetterCall _$GetterCallFromJson(Map<String, dynamic> json) => GetterCall(
-      json['abi'] as String,
-      json['getter'] as String,
-      json['params'] as Map<String, dynamic>,
-    );
+  json['abi'] as String,
+  json['getter'] as String,
+  json['params'] as Map<String, dynamic>,
+);
 
 Map<String, dynamic> _$GetterCallToJson(GetterCall instance) =>
     <String, dynamic>{

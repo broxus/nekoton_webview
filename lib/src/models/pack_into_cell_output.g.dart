@@ -7,13 +7,7 @@ part of 'pack_into_cell_output.dart';
 // **************************************************************************
 
 PackIntoCellOutput _$PackIntoCellOutputFromJson(Map<String, dynamic> json) =>
-    PackIntoCellOutput(
-      json['boc'] as String,
-      json['hash'] as String,
-    );
+    PackIntoCellOutput(json['boc'] as String, json['hash'] as String);
 
 Map<String, dynamic> _$PackIntoCellOutputToJson(PackIntoCellOutput instance) =>
-    <String, dynamic>{
-      'boc': instance.boc,
-      'hash': instance.hash,
-    };
+    <String, dynamic>{'boc': instance.boc, 'hash': instance.hash};

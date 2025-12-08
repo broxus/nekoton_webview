@@ -6,7 +6,11 @@ part 'unpack_from_cell_input.g.dart';
 @JsonSerializable()
 class UnpackFromCellInput {
   const UnpackFromCellInput(
-      this.abiVersion, this.structure, this.boc, this.allowPartial);
+    this.abiVersion,
+    this.structure,
+    this.boc,
+    this.allowPartial,
+  );
 
   ///ABI version. 2.2 if not specified otherwise
   final String? abiVersion;

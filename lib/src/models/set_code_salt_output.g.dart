@@ -7,13 +7,7 @@ part of 'set_code_salt_output.dart';
 // **************************************************************************
 
 SetCodeSaltOutput _$SetCodeSaltOutputFromJson(Map<String, dynamic> json) =>
-    SetCodeSaltOutput(
-      json['code'] as String,
-      json['hash'] as String,
-    );
+    SetCodeSaltOutput(json['code'] as String, json['hash'] as String);
 
 Map<String, dynamic> _$SetCodeSaltOutputToJson(SetCodeSaltOutput instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'hash': instance.hash,
-    };
+    <String, dynamic>{'code': instance.code, 'hash': instance.hash};

@@ -5,8 +5,14 @@ part 'full_contract_state.g.dart';
 
 @JsonSerializable()
 class FullContractState {
-  const FullContractState(this.boc, this.balance, this.genTimings,
-      this.lastTransactionId, this.isDeployed, this.codeHash);
+  const FullContractState(
+    this.boc,
+    this.balance,
+    this.genTimings,
+    this.lastTransactionId,
+    this.isDeployed,
+    this.codeHash,
+  );
 
   final String boc;
   final String balance;

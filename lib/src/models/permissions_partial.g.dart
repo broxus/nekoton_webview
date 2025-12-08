@@ -12,7 +12,8 @@ PermissionsPartial _$PermissionsPartialFromJson(Map<String, dynamic> json) =>
       json['accountInteraction'] == null
           ? null
           : PermissionsAccountInteraction.fromJson(
-              json['accountInteraction'] as Map<String, dynamic>),
+              json['accountInteraction'] as Map<String, dynamic>,
+            ),
     );
 
 Map<String, dynamic> _$PermissionsPartialToJson(PermissionsPartial instance) =>

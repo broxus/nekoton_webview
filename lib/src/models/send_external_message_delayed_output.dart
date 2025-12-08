@@ -11,8 +11,8 @@ class SendExternalMessageDelayedOutput {
   final DelayedMessage message;
 
   factory SendExternalMessageDelayedOutput.fromJson(
-          Map<String, dynamic> json) =>
-      _$SendExternalMessageDelayedOutputFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$SendExternalMessageDelayedOutputFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$SendExternalMessageDelayedOutputToJson(this);

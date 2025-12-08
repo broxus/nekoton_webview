@@ -7,11 +7,7 @@ part of 'change_network_input.dart';
 // **************************************************************************
 
 ChangeNetworkInput _$ChangeNetworkInputFromJson(Map<String, dynamic> json) =>
-    ChangeNetworkInput(
-      json['networkId'] as num,
-    );
+    ChangeNetworkInput(json['networkId'] as num);
 
 Map<String, dynamic> _$ChangeNetworkInputToJson(ChangeNetworkInput instance) =>
-    <String, dynamic>{
-      'networkId': instance.networkId,
-    };
+    <String, dynamic>{'networkId': instance.networkId};

@@ -7,12 +7,8 @@ part of 'get_transaction_input.dart';
 // **************************************************************************
 
 GetTransactionInput _$GetTransactionInputFromJson(Map<String, dynamic> json) =>
-    GetTransactionInput(
-      json['hash'] as String,
-    );
+    GetTransactionInput(json['hash'] as String);
 
 Map<String, dynamic> _$GetTransactionInputToJson(
-        GetTransactionInput instance) =>
-    <String, dynamic>{
-      'hash': instance.hash,
-    };
+  GetTransactionInput instance,
+) => <String, dynamic>{'hash': instance.hash};

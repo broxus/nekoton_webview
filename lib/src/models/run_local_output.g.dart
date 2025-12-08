@@ -13,7 +13,4 @@ RunLocalOutput _$RunLocalOutputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RunLocalOutputToJson(RunLocalOutput instance) =>
-    <String, dynamic>{
-      'output': instance.output,
-      'code': instance.code,
-    };
+    <String, dynamic>{'output': instance.output, 'code': instance.code};

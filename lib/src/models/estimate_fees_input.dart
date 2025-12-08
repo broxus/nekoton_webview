@@ -6,7 +6,12 @@ part 'estimate_fees_input.g.dart';
 @JsonSerializable()
 class EstimateFeesInput {
   const EstimateFeesInput(
-      this.sender, this.recipient, this.amount, this.payload, this.stateInit);
+    this.sender,
+    this.recipient,
+    this.amount,
+    this.payload,
+    this.stateInit,
+  );
 
   ///This wallet will be used to send the message.
   ///It is the same address as the `accountInteraction.address`, but it must be explicitly provided
@@ -15,10 +20,7 @@ class EstimateFeesInput {
   ///Message destination address
   final String recipient;
 
-  @JsonKey(
-    fromJson: BigInt.tryParse,
-    toJson: _bigIntToString,
-  )
+  @JsonKey(fromJson: BigInt.tryParse, toJson: _bigIntToString)
   final BigInt? amount;
 
   ///Optional function call

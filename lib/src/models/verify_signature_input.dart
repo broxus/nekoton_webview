@@ -6,7 +6,11 @@ part 'verify_signature_input.g.dart';
 @JsonSerializable()
 class VerifySignatureInput {
   const VerifySignatureInput(
-      this.publicKey, this.dataHash, this.signature, this.withSignatureId);
+    this.publicKey,
+    this.dataHash,
+    this.signature,
+    this.withSignatureId,
+  );
 
   ///The public key of the preferred account.
   ///It is the same publicKey as the `accountInteraction.publicKey`, but it must be explicitly provided

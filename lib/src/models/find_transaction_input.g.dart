@@ -7,13 +7,9 @@ part of 'find_transaction_input.dart';
 // **************************************************************************
 
 FindTransactionInput _$FindTransactionInputFromJson(
-        Map<String, dynamic> json) =>
-    FindTransactionInput(
-      json['inMessageHash'] as String?,
-    );
+  Map<String, dynamic> json,
+) => FindTransactionInput(json['inMessageHash'] as String?);
 
 Map<String, dynamic> _$FindTransactionInputToJson(
-        FindTransactionInput instance) =>
-    <String, dynamic>{
-      'inMessageHash': instance.inMessageHash,
-    };
+  FindTransactionInput instance,
+) => <String, dynamic>{'inMessageHash': instance.inMessageHash};

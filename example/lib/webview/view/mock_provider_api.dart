@@ -109,9 +109,7 @@ class MockProviderApi extends ProviderApi {
   }
 
   @override
-  Future<ExtractPublicKeyOutput> extractPublicKey(
-    ExtractPublicKeyInput input,
-  ) {
+  Future<ExtractPublicKeyOutput> extractPublicKey(ExtractPublicKeyInput input) {
     throw UnimplementedError();
   }
 

@@ -6,7 +6,12 @@ part 'execute_local_input_message_header_internal.g.dart';
 @JsonSerializable()
 class ExecuteLocalInputMessageHeaderInternal {
   const ExecuteLocalInputMessageHeaderInternal(
-      this.type, this.sender, this.amount, this.bounce, this.bounced);
+    this.type,
+    this.sender,
+    this.amount,
+    this.bounce,
+    this.bounced,
+  );
 
   ///Internal message header
   final String type;
@@ -14,10 +19,7 @@ class ExecuteLocalInputMessageHeaderInternal {
   ///Message source address
   final String sender;
 
-  @JsonKey(
-    fromJson: BigInt.tryParse,
-    toJson: _bigIntToString,
-  )
+  @JsonKey(fromJson: BigInt.tryParse, toJson: _bigIntToString)
   final BigInt? amount;
 
   ///Whether to bounce message back on error
@@ -27,8 +29,8 @@ class ExecuteLocalInputMessageHeaderInternal {
   final bool? bounced;
 
   factory ExecuteLocalInputMessageHeaderInternal.fromJson(
-          Map<String, dynamic> json) =>
-      _$ExecuteLocalInputMessageHeaderInternalFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$ExecuteLocalInputMessageHeaderInternalFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$ExecuteLocalInputMessageHeaderInternalToJson(this);

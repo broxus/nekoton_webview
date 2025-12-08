@@ -7,11 +7,7 @@ part of 'jrpc_socket_params.dart';
 // **************************************************************************
 
 JrpcSocketParams _$JrpcSocketParamsFromJson(Map<String, dynamic> json) =>
-    JrpcSocketParams(
-      json['endpoint'] as String,
-    );
+    JrpcSocketParams(json['endpoint'] as String);
 
 Map<String, dynamic> _$JrpcSocketParamsToJson(JrpcSocketParams instance) =>
-    <String, dynamic>{
-      'endpoint': instance.endpoint,
-    };
+    <String, dynamic>{'endpoint': instance.endpoint};

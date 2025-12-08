@@ -6,7 +6,11 @@ part 'get_contract_fields_input.g.dart';
 @JsonSerializable()
 class GetContractFieldsInput {
   const GetContractFieldsInput(
-      this.address, this.abi, this.cachedState, this.allowPartial);
+    this.address,
+    this.abi,
+    this.cachedState,
+    this.allowPartial,
+  );
 
   ///Contract address
   final String address;

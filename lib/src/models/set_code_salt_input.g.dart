@@ -7,13 +7,7 @@ part of 'set_code_salt_input.dart';
 // **************************************************************************
 
 SetCodeSaltInput _$SetCodeSaltInputFromJson(Map<String, dynamic> json) =>
-    SetCodeSaltInput(
-      json['code'] as String,
-      json['salt'] as String,
-    );
+    SetCodeSaltInput(json['code'] as String, json['salt'] as String);
 
 Map<String, dynamic> _$SetCodeSaltInputToJson(SetCodeSaltInput instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'salt': instance.salt,
-    };
+    <String, dynamic>{'code': instance.code, 'salt': instance.salt};

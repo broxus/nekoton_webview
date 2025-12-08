@@ -6,7 +6,10 @@ part 'sign_data_raw_output.g.dart';
 @JsonSerializable()
 class SignDataRawOutput {
   const SignDataRawOutput(
-      this.signature, this.signatureHex, this.signatureParts);
+    this.signature,
+    this.signatureHex,
+    this.signatureParts,
+  );
 
   ///Base64 encoded signature bytes (data is guaranteed to be 64 bytes long)
   final String signature;

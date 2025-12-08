@@ -7,13 +7,7 @@ part of 'merge_tvc_input.dart';
 // **************************************************************************
 
 MergeTvcInput _$MergeTvcInputFromJson(Map<String, dynamic> json) =>
-    MergeTvcInput(
-      json['code'] as String,
-      json['data'] as String,
-    );
+    MergeTvcInput(json['code'] as String, json['data'] as String);
 
 Map<String, dynamic> _$MergeTvcInputToJson(MergeTvcInput instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'data': instance.data,
-    };
+    <String, dynamic>{'code': instance.code, 'data': instance.data};

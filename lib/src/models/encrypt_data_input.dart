@@ -6,7 +6,11 @@ part 'encrypt_data_input.g.dart';
 @JsonSerializable()
 class EncryptDataInput {
   const EncryptDataInput(
-      this.publicKey, this.recipientPublicKeys, this.algorithm, this.data);
+    this.publicKey,
+    this.recipientPublicKeys,
+    this.algorithm,
+    this.data,
+  );
 
   ///The public key of the preferred account.
   ///It is the same publicKey as the `accountInteraction.publicKey`, but it must be explicitly provided

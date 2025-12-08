@@ -6,14 +6,15 @@ part 'send_message_input.g.dart';
 @JsonSerializable()
 class SendMessageInput {
   const SendMessageInput(
-      this.sender,
-      this.recipient,
-      this.amount,
-      this.bounce,
-      this.payload,
-      this.stateInit,
-      this.ignoredComputePhaseCodes,
-      this.ignoredActionPhaseCodes);
+    this.sender,
+    this.recipient,
+    this.amount,
+    this.bounce,
+    this.payload,
+    this.stateInit,
+    this.ignoredComputePhaseCodes,
+    this.ignoredActionPhaseCodes,
+  );
 
   ///Preferred wallet address.
   ///It is the same address as the `accountInteraction.address`, but it must be explicitly provided
@@ -22,10 +23,7 @@ class SendMessageInput {
   ///Message destination address
   final String recipient;
 
-  @JsonKey(
-    fromJson: BigInt.tryParse,
-    toJson: _bigIntToString,
-  )
+  @JsonKey(fromJson: BigInt.tryParse, toJson: _bigIntToString)
   final BigInt? amount;
 
   ///Whether to bounce message back on error

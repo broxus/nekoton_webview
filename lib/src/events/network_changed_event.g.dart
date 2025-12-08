@@ -13,8 +13,8 @@ NetworkChangedEvent _$NetworkChangedEventFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NetworkChangedEventToJson(
-        NetworkChangedEvent instance) =>
-    <String, dynamic>{
-      'selectedConnection': instance.selectedConnection,
-      'networkId': instance.networkId,
-    };
+  NetworkChangedEvent instance,
+) => <String, dynamic>{
+  'selectedConnection': instance.selectedConnection,
+  'networkId': instance.networkId,
+};

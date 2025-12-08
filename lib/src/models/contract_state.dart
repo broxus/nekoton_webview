@@ -5,8 +5,13 @@ part 'contract_state.g.dart';
 
 @JsonSerializable()
 class ContractState {
-  const ContractState(this.balance, this.genTimings, this.lastTransactionId,
-      this.isDeployed, this.codeHash);
+  const ContractState(
+    this.balance,
+    this.genTimings,
+    this.lastTransactionId,
+    this.isDeployed,
+    this.codeHash,
+  );
 
   final String balance;
   final GenTimings genTimings;

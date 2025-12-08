@@ -7,13 +7,7 @@ part of 'proto_connection.dart';
 // **************************************************************************
 
 ProtoConnection _$ProtoConnectionFromJson(Map<String, dynamic> json) =>
-    ProtoConnection(
-      json['type'] as String,
-      json['data'],
-    );
+    ProtoConnection(json['type'] as String, json['data']);
 
 Map<String, dynamic> _$ProtoConnectionToJson(ProtoConnection instance) =>
-    <String, dynamic>{
-      'type': instance.type,
-      'data': instance.data,
-    };
+    <String, dynamic>{'type': instance.type, 'data': instance.data};

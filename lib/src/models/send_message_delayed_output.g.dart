@@ -7,13 +7,11 @@ part of 'send_message_delayed_output.dart';
 // **************************************************************************
 
 SendMessageDelayedOutput _$SendMessageDelayedOutputFromJson(
-        Map<String, dynamic> json) =>
-    SendMessageDelayedOutput(
-      DelayedMessage.fromJson(json['message'] as Map<String, dynamic>),
-    );
+  Map<String, dynamic> json,
+) => SendMessageDelayedOutput(
+  DelayedMessage.fromJson(json['message'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$SendMessageDelayedOutputToJson(
-        SendMessageDelayedOutput instance) =>
-    <String, dynamic>{
-      'message': instance.message.toJson(),
-    };
+  SendMessageDelayedOutput instance,
+) => <String, dynamic>{'message': instance.message.toJson()};

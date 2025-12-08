@@ -7,11 +7,7 @@ part of 'asset_type_params.dart';
 // **************************************************************************
 
 AssetTypeParams _$AssetTypeParamsFromJson(Map<String, dynamic> json) =>
-    AssetTypeParams(
-      json['rootContract'] as String,
-    );
+    AssetTypeParams(json['rootContract'] as String);
 
 Map<String, dynamic> _$AssetTypeParamsToJson(AssetTypeParams instance) =>
-    <String, dynamic>{
-      'rootContract': instance.rootContract,
-    };
+    <String, dynamic>{'rootContract': instance.rootContract};

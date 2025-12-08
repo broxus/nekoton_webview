@@ -10,7 +10,8 @@ SubscribeInput _$SubscribeInputFromJson(Map<String, dynamic> json) =>
     SubscribeInput(
       json['address'] as String,
       ContractUpdatesSubscriptionPartial.fromJson(
-          json['subscriptions'] as Map<String, dynamic>),
+        json['subscriptions'] as Map<String, dynamic>,
+      ),
     );
 
 Map<String, dynamic> _$SubscribeInputToJson(SubscribeInput instance) =>
