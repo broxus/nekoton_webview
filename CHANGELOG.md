@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-12-08
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`nekoton_webview` - `v0.2.0`](#nekoton_webview---v020)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `nekoton_webview` - `v0.2.0`
+
+ - **BREAKING** **CHORE**: flutter 3.38. ([87af1f3a](https://github.com/broxus/nekoton_webview/commit/87af1f3a160bbb1e96174084067d522ae574cd56))
+
+## 0.2.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **CHORE**: flutter 3.38. ([87af1f3a](https://github.com/broxus/nekoton_webview/commit/87af1f3a160bbb1e96174084067d522ae574cd56))
+
+
 ## 2025-10-02
 
 ### Changes
