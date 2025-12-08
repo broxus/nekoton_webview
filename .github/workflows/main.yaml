@@ -15,7 +15,7 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   build_and_test:
-    uses: broxus/flutter_templates/.github/workflows/run-melos.yaml@v3
+    uses: broxus/flutter_templates/.github/workflows/run-melos.yaml@v4
     with:
       flutter_version: '3.38.4'
 
