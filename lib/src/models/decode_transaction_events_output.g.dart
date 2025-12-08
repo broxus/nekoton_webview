@@ -7,16 +7,19 @@ part of 'decode_transaction_events_output.dart';
 // **************************************************************************
 
 DecodeTransactionEventsOutput _$DecodeTransactionEventsOutputFromJson(
-        Map<String, dynamic> json) =>
-    DecodeTransactionEventsOutput(
-      (json['events'] as List<dynamic>)
-          .map((e) => DecodeTransactionEventsOutputEvents.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-    );
+  Map<String, dynamic> json,
+) => DecodeTransactionEventsOutput(
+  (json['events'] as List<dynamic>)
+      .map(
+        (e) => DecodeTransactionEventsOutputEvents.fromJson(
+          e as Map<String, dynamic>,
+        ),
+      )
+      .toList(),
+);
 
 Map<String, dynamic> _$DecodeTransactionEventsOutputToJson(
-        DecodeTransactionEventsOutput instance) =>
-    <String, dynamic>{
-      'events': instance.events.map((e) => e.toJson()).toList(),
-    };
+  DecodeTransactionEventsOutput instance,
+) => <String, dynamic>{
+  'events': instance.events.map((e) => e.toJson()).toList(),
+};

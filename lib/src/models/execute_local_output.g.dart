@@ -12,7 +12,8 @@ ExecuteLocalOutput _$ExecuteLocalOutputFromJson(Map<String, dynamic> json) =>
       json['newState'] == null
           ? null
           : FullContractState.fromJson(
-              json['newState'] as Map<String, dynamic>),
+              json['newState'] as Map<String, dynamic>,
+            ),
       json['output'] as Map<String, dynamic>?,
     );
 

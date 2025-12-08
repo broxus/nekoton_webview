@@ -5,8 +5,12 @@ part 'gql_socket_params.g.dart';
 
 @JsonSerializable()
 class GqlSocketParams {
-  const GqlSocketParams(this.endpoints, this.latencyDetectionInterval,
-      this.maxLatency, this.local);
+  const GqlSocketParams(
+    this.endpoints,
+    this.latencyDetectionInterval,
+    this.maxLatency,
+    this.local,
+  );
 
   ///Path to graphql api endpoints
   final List<String> endpoints;

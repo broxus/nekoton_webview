@@ -7,11 +7,7 @@ part of 'get_boc_hash_input.dart';
 // **************************************************************************
 
 GetBocHashInput _$GetBocHashInputFromJson(Map<String, dynamic> json) =>
-    GetBocHashInput(
-      json['boc'] as String,
-    );
+    GetBocHashInput(json['boc'] as String);
 
 Map<String, dynamic> _$GetBocHashInputToJson(GetBocHashInput instance) =>
-    <String, dynamic>{
-      'boc': instance.boc,
-    };
+    <String, dynamic>{'boc': instance.boc};

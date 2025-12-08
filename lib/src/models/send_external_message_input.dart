@@ -5,8 +5,14 @@ part 'send_external_message_input.g.dart';
 
 @JsonSerializable()
 class SendExternalMessageInput {
-  const SendExternalMessageInput(this.publicKey, this.recipient, this.stateInit,
-      this.payload, this.local, this.executorParams);
+  const SendExternalMessageInput(
+    this.publicKey,
+    this.recipient,
+    this.stateInit,
+    this.payload,
+    this.local,
+    this.executorParams,
+  );
 
   ///The public key of the preferred account.
   ///It is the same publicKey as the `accountInteraction.publicKey`, but it must be explicitly provided

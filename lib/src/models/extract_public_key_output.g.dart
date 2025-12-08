@@ -7,13 +7,9 @@ part of 'extract_public_key_output.dart';
 // **************************************************************************
 
 ExtractPublicKeyOutput _$ExtractPublicKeyOutputFromJson(
-        Map<String, dynamic> json) =>
-    ExtractPublicKeyOutput(
-      json['publicKey'] as String,
-    );
+  Map<String, dynamic> json,
+) => ExtractPublicKeyOutput(json['publicKey'] as String);
 
 Map<String, dynamic> _$ExtractPublicKeyOutputToJson(
-        ExtractPublicKeyOutput instance) =>
-    <String, dynamic>{
-      'publicKey': instance.publicKey,
-    };
+  ExtractPublicKeyOutput instance,
+) => <String, dynamic>{'publicKey': instance.publicKey};

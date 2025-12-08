@@ -13,7 +13,4 @@ JrpcConnection _$JrpcConnectionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$JrpcConnectionToJson(JrpcConnection instance) =>
-    <String, dynamic>{
-      'type': instance.type,
-      'data': instance.data.toJson(),
-    };
+    <String, dynamic>{'type': instance.type, 'data': instance.data.toJson()};

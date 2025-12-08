@@ -6,7 +6,11 @@ part 'sign_data_output.g.dart';
 @JsonSerializable()
 class SignDataOutput {
   const SignDataOutput(
-      this.dataHash, this.signature, this.signatureHex, this.signatureParts);
+    this.dataHash,
+    this.signature,
+    this.signatureHex,
+    this.signatureParts,
+  );
 
   ///Hex encoded data hash
   final String dataHash;

@@ -17,10 +17,10 @@ UnpackFromCellInput _$UnpackFromCellInputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$UnpackFromCellInputToJson(
-        UnpackFromCellInput instance) =>
-    <String, dynamic>{
-      'abiVersion': instance.abiVersion,
-      'structure': instance.structure.map((e) => e.toJson()).toList(),
-      'boc': instance.boc,
-      'allowPartial': instance.allowPartial,
-    };
+  UnpackFromCellInput instance,
+) => <String, dynamic>{
+  'abiVersion': instance.abiVersion,
+  'structure': instance.structure.map((e) => e.toJson()).toList(),
+  'boc': instance.boc,
+  'allowPartial': instance.allowPartial,
+};

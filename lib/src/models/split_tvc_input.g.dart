@@ -7,11 +7,7 @@ part of 'split_tvc_input.dart';
 // **************************************************************************
 
 SplitTvcInput _$SplitTvcInputFromJson(Map<String, dynamic> json) =>
-    SplitTvcInput(
-      json['tvc'] as String,
-    );
+    SplitTvcInput(json['tvc'] as String);
 
 Map<String, dynamic> _$SplitTvcInputToJson(SplitTvcInput instance) =>
-    <String, dynamic>{
-      'tvc': instance.tvc,
-    };
+    <String, dynamic>{'tvc': instance.tvc};

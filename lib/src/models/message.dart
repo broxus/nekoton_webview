@@ -5,8 +5,16 @@ part 'message.g.dart';
 
 @JsonSerializable()
 class Message {
-  const Message(this.hash, this.src, this.dst, this.value, this.bounce,
-      this.bounced, this.body, this.bodyHash);
+  const Message(
+    this.hash,
+    this.src,
+    this.dst,
+    this.value,
+    this.bounce,
+    this.bounced,
+    this.body,
+    this.bodyHash,
+  );
 
   final String hash;
   final String? src;

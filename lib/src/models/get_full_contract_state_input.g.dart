@@ -7,13 +7,9 @@ part of 'get_full_contract_state_input.dart';
 // **************************************************************************
 
 GetFullContractStateInput _$GetFullContractStateInputFromJson(
-        Map<String, dynamic> json) =>
-    GetFullContractStateInput(
-      json['address'] as String,
-    );
+  Map<String, dynamic> json,
+) => GetFullContractStateInput(json['address'] as String);
 
 Map<String, dynamic> _$GetFullContractStateInputToJson(
-        GetFullContractStateInput instance) =>
-    <String, dynamic>{
-      'address': instance.address,
-    };
+  GetFullContractStateInput instance,
+) => <String, dynamic>{'address': instance.address};

@@ -15,8 +15,8 @@ class IgnoreTransactionTreeSimulationError {
   final num code;
 
   factory IgnoreTransactionTreeSimulationError.fromJson(
-          Map<String, dynamic> json) =>
-      _$IgnoreTransactionTreeSimulationErrorFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$IgnoreTransactionTreeSimulationErrorFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$IgnoreTransactionTreeSimulationErrorToJson(this);

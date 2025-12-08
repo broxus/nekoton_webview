@@ -7,13 +7,9 @@ part of 'encode_internal_input_output.dart';
 // **************************************************************************
 
 EncodeInternalInputOutput _$EncodeInternalInputOutputFromJson(
-        Map<String, dynamic> json) =>
-    EncodeInternalInputOutput(
-      json['boc'] as String,
-    );
+  Map<String, dynamic> json,
+) => EncodeInternalInputOutput(json['boc'] as String);
 
 Map<String, dynamic> _$EncodeInternalInputOutputToJson(
-        EncodeInternalInputOutput instance) =>
-    <String, dynamic>{
-      'boc': instance.boc,
-    };
+  EncodeInternalInputOutput instance,
+) => <String, dynamic>{'boc': instance.boc};

@@ -6,13 +6,14 @@ part 'get_provider_state_output.g.dart';
 @JsonSerializable()
 class GetProviderStateOutput {
   const GetProviderStateOutput(
-      this.version,
-      this.numericVersion,
-      this.selectedConnection,
-      this.networkId,
-      this.supportedPermissions,
-      this.permissions,
-      this.subscriptions);
+    this.version,
+    this.numericVersion,
+    this.selectedConnection,
+    this.networkId,
+    this.supportedPermissions,
+    this.permissions,
+    this.subscriptions,
+  );
 
   ///Provider api version in semver format (x.y.z)
   final String version;

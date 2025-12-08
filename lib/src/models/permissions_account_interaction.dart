@@ -6,7 +6,10 @@ part 'permissions_account_interaction.g.dart';
 @JsonSerializable()
 class PermissionsAccountInteraction {
   const PermissionsAccountInteraction(
-      this.address, this.publicKey, this.contractType);
+    this.address,
+    this.publicKey,
+    this.contractType,
+  );
 
   final String address;
   final String publicKey;

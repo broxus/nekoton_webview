@@ -14,6 +14,4 @@ AddNetworkOutput _$AddNetworkOutputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddNetworkOutputToJson(AddNetworkOutput instance) =>
-    <String, dynamic>{
-      'network': instance.network?.toJson(),
-    };
+    <String, dynamic>{'network': instance.network?.toJson()};

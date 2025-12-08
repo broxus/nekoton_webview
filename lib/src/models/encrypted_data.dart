@@ -5,8 +5,13 @@ part 'encrypted_data.g.dart';
 
 @JsonSerializable()
 class EncryptedData {
-  const EncryptedData(this.algorithm, this.sourcePublicKey,
-      this.recipientPublicKey, this.data, this.nonce);
+  const EncryptedData(
+    this.algorithm,
+    this.sourcePublicKey,
+    this.recipientPublicKey,
+    this.data,
+    this.nonce,
+  );
 
   final String algorithm;
 

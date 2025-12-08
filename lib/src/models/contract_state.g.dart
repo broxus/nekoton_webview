@@ -13,7 +13,8 @@ ContractState _$ContractStateFromJson(Map<String, dynamic> json) =>
       json['lastTransactionId'] == null
           ? null
           : LastTransactionId.fromJson(
-              json['lastTransactionId'] as Map<String, dynamic>),
+              json['lastTransactionId'] as Map<String, dynamic>,
+            ),
       json['isDeployed'] as bool,
       json['codeHash'] as String?,
     );

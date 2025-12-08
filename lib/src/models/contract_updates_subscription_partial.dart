@@ -14,8 +14,8 @@ class ContractUpdatesSubscriptionPartial {
   final bool? transactions;
 
   factory ContractUpdatesSubscriptionPartial.fromJson(
-          Map<String, dynamic> json) =>
-      _$ContractUpdatesSubscriptionPartialFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$ContractUpdatesSubscriptionPartialFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$ContractUpdatesSubscriptionPartialToJson(this);

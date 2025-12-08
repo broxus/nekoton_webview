@@ -7,11 +7,7 @@ part of 'add_asset_output.dart';
 // **************************************************************************
 
 AddAssetOutput _$AddAssetOutputFromJson(Map<String, dynamic> json) =>
-    AddAssetOutput(
-      json['newAsset'] as bool,
-    );
+    AddAssetOutput(json['newAsset'] as bool);
 
 Map<String, dynamic> _$AddAssetOutputToJson(AddAssetOutput instance) =>
-    <String, dynamic>{
-      'newAsset': instance.newAsset,
-    };
+    <String, dynamic>{'newAsset': instance.newAsset};

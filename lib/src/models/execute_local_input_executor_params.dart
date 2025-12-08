@@ -6,7 +6,9 @@ part 'execute_local_input_executor_params.g.dart';
 @JsonSerializable()
 class ExecuteLocalInputExecutorParams {
   const ExecuteLocalInputExecutorParams(
-      this.disableSignatureCheck, this.overrideBalance);
+    this.disableSignatureCheck,
+    this.overrideBalance,
+  );
 
   ///If `true`, signature verification always succeeds
   final bool? disableSignatureCheck;

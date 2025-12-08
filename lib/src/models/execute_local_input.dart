@@ -5,8 +5,14 @@ part 'execute_local_input.g.dart';
 
 @JsonSerializable()
 class ExecuteLocalInput {
-  const ExecuteLocalInput(this.address, this.cachedState, this.stateInit,
-      this.payload, this.messageHeader, this.executorParams);
+  const ExecuteLocalInput(
+    this.address,
+    this.cachedState,
+    this.stateInit,
+    this.payload,
+    this.messageHeader,
+    this.executorParams,
+  );
 
   ///Contract address
   final String address;

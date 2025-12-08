@@ -6,7 +6,10 @@ part 'get_accounts_by_code_hash_input.g.dart';
 @JsonSerializable()
 class GetAccountsByCodeHashInput {
   const GetAccountsByCodeHashInput(
-      this.codeHash, this.continuation, this.limit);
+    this.codeHash,
+    this.continuation,
+    this.limit,
+  );
 
   ///Hex encoded code hash
   final String codeHash;

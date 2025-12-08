@@ -19,14 +19,13 @@ extension NekotonWebview on InAppWebViewController {
   ///   }
   /// )
   ///```
-  Future<void> initNekotonProvider({
-    required ProviderApi providerApi,
-  }) async {
+  Future<void> initNekotonProvider({required ProviderApi providerApi}) async {
     _logger.finest('InitNekotonProvider');
     await addUserScript(
       userScript: UserScript(
-        source: await rootBundle
-            .loadString('packages/nekoton_webview/assets/main.js'),
+        source: await rootBundle.loadString(
+          'packages/nekoton_webview/assets/main.js',
+        ),
         injectionTime: UserScriptInjectionTime.AT_DOCUMENT_START,
       ),
     );
@@ -117,8 +116,9 @@ extension NekotonWebview on InAppWebViewController {
     try {
       _logger.finest('permissionsChanged', event);
 
-      final jsonOutput =
-          jsonEncode(event.toJson()).replaceAll('tonClient', 'basic');
+      final jsonOutput = jsonEncode(
+        event.toJson(),
+      ).replaceAll('tonClient', 'basic');
 
       await evaluateJavascript(
         source: "window.__dartNotifications.permissionsChanged('$jsonOutput')",

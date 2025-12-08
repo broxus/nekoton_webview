@@ -5,8 +5,13 @@ part 'run_getter_input.g.dart';
 
 @JsonSerializable()
 class RunGetterInput {
-  const RunGetterInput(this.address, this.cachedState, this.getterCall,
-      this.withSignatureId, this.libraries);
+  const RunGetterInput(
+    this.address,
+    this.cachedState,
+    this.getterCall,
+    this.withSignatureId,
+    this.libraries,
+  );
 
   ///Contract address
   final String address;

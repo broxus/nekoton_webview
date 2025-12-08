@@ -12,7 +12,8 @@ RunGetterInput _$RunGetterInputFromJson(Map<String, dynamic> json) =>
       json['cachedState'] == null
           ? null
           : FullContractState.fromJson(
-              json['cachedState'] as Map<String, dynamic>),
+              json['cachedState'] as Map<String, dynamic>,
+            ),
       GetterCall.fromJson(json['getterCall'] as Map<String, dynamic>),
       json['withSignatureId'],
       (json['libraries'] as Map<String, dynamic>?)?.map(

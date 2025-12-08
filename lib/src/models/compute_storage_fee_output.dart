@@ -5,8 +5,13 @@ part 'compute_storage_fee_output.g.dart';
 
 @JsonSerializable()
 class ComputeStorageFeeOutput {
-  const ComputeStorageFeeOutput(this.storageFee, this.storageFeeDebt,
-      this.accountStatus, this.freezeDueLimit, this.deleteDueLimit);
+  const ComputeStorageFeeOutput(
+    this.storageFee,
+    this.storageFeeDebt,
+    this.accountStatus,
+    this.freezeDueLimit,
+    this.deleteDueLimit,
+  );
 
   ///The total storage fee amount in nano EVER for the contract state up to the specified timestamp.
   final String storageFee;

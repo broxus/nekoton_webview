@@ -14,9 +14,7 @@ class MockProviderApi extends ProviderApi {
   }
 
   @override
-  Future<PermissionsPartial> requestPermissions(
-    RequestPermissionsInput input,
-  ) {
+  Future<PermissionsPartial> requestPermissions(RequestPermissionsInput input) {
     throw UnimplementedError();
   }
 
@@ -95,9 +93,7 @@ class MockProviderApi extends ProviderApi {
   }
 
   @override
-  Future<ExtractPublicKeyOutput> extractPublicKey(
-    ExtractPublicKeyInput input,
-  ) {
+  Future<ExtractPublicKeyOutput> extractPublicKey(ExtractPublicKeyInput input) {
     throw UnimplementedError();
   }
 

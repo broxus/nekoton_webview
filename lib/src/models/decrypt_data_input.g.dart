@@ -12,6 +12,4 @@ DecryptDataInput _$DecryptDataInputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DecryptDataInputToJson(DecryptDataInput instance) =>
-    <String, dynamic>{
-      'encryptedData': instance.encryptedData.toJson(),
-    };
+    <String, dynamic>{'encryptedData': instance.encryptedData.toJson()};

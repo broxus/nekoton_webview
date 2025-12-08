@@ -7,10 +7,10 @@ part of 'function_call.dart';
 // **************************************************************************
 
 FunctionCall _$FunctionCallFromJson(Map<String, dynamic> json) => FunctionCall(
-      json['abi'] as String,
-      json['method'] as String,
-      json['params'] as Map<String, dynamic>,
-    );
+  json['abi'] as String,
+  json['method'] as String,
+  json['params'] as Map<String, dynamic>,
+);
 
 Map<String, dynamic> _$FunctionCallToJson(FunctionCall instance) =>
     <String, dynamic>{

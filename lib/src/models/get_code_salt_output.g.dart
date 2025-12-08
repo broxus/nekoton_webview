@@ -7,11 +7,7 @@ part of 'get_code_salt_output.dart';
 // **************************************************************************
 
 GetCodeSaltOutput _$GetCodeSaltOutputFromJson(Map<String, dynamic> json) =>
-    GetCodeSaltOutput(
-      json['salt'] as String?,
-    );
+    GetCodeSaltOutput(json['salt'] as String?);
 
 Map<String, dynamic> _$GetCodeSaltOutputToJson(GetCodeSaltOutput instance) =>
-    <String, dynamic>{
-      'salt': instance.salt,
-    };
+    <String, dynamic>{'salt': instance.salt};

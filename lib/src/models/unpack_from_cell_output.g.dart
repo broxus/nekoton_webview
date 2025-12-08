@@ -7,13 +7,9 @@ part of 'unpack_from_cell_output.dart';
 // **************************************************************************
 
 UnpackFromCellOutput _$UnpackFromCellOutputFromJson(
-        Map<String, dynamic> json) =>
-    UnpackFromCellOutput(
-      json['data'] as Map<String, dynamic>,
-    );
+  Map<String, dynamic> json,
+) => UnpackFromCellOutput(json['data'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$UnpackFromCellOutputToJson(
-        UnpackFromCellOutput instance) =>
-    <String, dynamic>{
-      'data': instance.data,
-    };
+  UnpackFromCellOutput instance,
+) => <String, dynamic>{'data': instance.data};

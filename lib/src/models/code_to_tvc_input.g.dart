@@ -7,11 +7,7 @@ part of 'code_to_tvc_input.dart';
 // **************************************************************************
 
 CodeToTvcInput _$CodeToTvcInputFromJson(Map<String, dynamic> json) =>
-    CodeToTvcInput(
-      json['code'] as String,
-    );
+    CodeToTvcInput(json['code'] as String);
 
 Map<String, dynamic> _$CodeToTvcInputToJson(CodeToTvcInput instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-    };
+    <String, dynamic>{'code': instance.code};

@@ -14,8 +14,8 @@ class SendUnsignedExternalMessageOutput {
   final Map<String, Object?>? output;
 
   factory SendUnsignedExternalMessageOutput.fromJson(
-          Map<String, dynamic> json) =>
-      _$SendUnsignedExternalMessageOutputFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$SendUnsignedExternalMessageOutputFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$SendUnsignedExternalMessageOutputToJson(this);

@@ -11,7 +11,8 @@ SignDataRawOutput _$SignDataRawOutputFromJson(Map<String, dynamic> json) =>
       json['signature'] as String,
       json['signatureHex'] as String,
       SignDataRawOutputSignatureParts.fromJson(
-          json['signatureParts'] as Map<String, dynamic>),
+        json['signatureParts'] as Map<String, dynamic>,
+      ),
     );
 
 Map<String, dynamic> _$SignDataRawOutputToJson(SignDataRawOutput instance) =>

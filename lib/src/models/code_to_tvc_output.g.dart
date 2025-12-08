@@ -7,13 +7,7 @@ part of 'code_to_tvc_output.dart';
 // **************************************************************************
 
 CodeToTvcOutput _$CodeToTvcOutputFromJson(Map<String, dynamic> json) =>
-    CodeToTvcOutput(
-      json['tvc'] as String,
-      json['hash'] as String,
-    );
+    CodeToTvcOutput(json['tvc'] as String, json['hash'] as String);
 
 Map<String, dynamic> _$CodeToTvcOutputToJson(CodeToTvcOutput instance) =>
-    <String, dynamic>{
-      'tvc': instance.tvc,
-      'hash': instance.hash,
-    };
+    <String, dynamic>{'tvc': instance.tvc, 'hash': instance.hash};

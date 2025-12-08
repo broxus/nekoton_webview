@@ -13,7 +13,4 @@ RunGetterOutput _$RunGetterOutputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RunGetterOutputToJson(RunGetterOutput instance) =>
-    <String, dynamic>{
-      'output': instance.output,
-      'code': instance.code,
-    };
+    <String, dynamic>{'output': instance.output, 'code': instance.code};

@@ -7,18 +7,17 @@ part of 'execute_local_input_message_header_external.dart';
 // **************************************************************************
 
 ExecuteLocalInputMessageHeaderExternal
-    _$ExecuteLocalInputMessageHeaderExternalFromJson(
-            Map<String, dynamic> json) =>
-        ExecuteLocalInputMessageHeaderExternal(
-          json['type'] as String,
-          json['publicKey'] as String,
-          json['withoutSignature'] as bool?,
-        );
+_$ExecuteLocalInputMessageHeaderExternalFromJson(Map<String, dynamic> json) =>
+    ExecuteLocalInputMessageHeaderExternal(
+      json['type'] as String,
+      json['publicKey'] as String,
+      json['withoutSignature'] as bool?,
+    );
 
 Map<String, dynamic> _$ExecuteLocalInputMessageHeaderExternalToJson(
-        ExecuteLocalInputMessageHeaderExternal instance) =>
-    <String, dynamic>{
-      'type': instance.type,
-      'publicKey': instance.publicKey,
-      'withoutSignature': instance.withoutSignature,
-    };
+  ExecuteLocalInputMessageHeaderExternal instance,
+) => <String, dynamic>{
+  'type': instance.type,
+  'publicKey': instance.publicKey,
+  'withoutSignature': instance.withoutSignature,
+};

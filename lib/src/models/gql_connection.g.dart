@@ -13,7 +13,4 @@ GqlConnection _$GqlConnectionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$GqlConnectionToJson(GqlConnection instance) =>
-    <String, dynamic>{
-      'type': instance.type,
-      'data': instance.data.toJson(),
-    };
+    <String, dynamic>{'type': instance.type, 'data': instance.data.toJson()};

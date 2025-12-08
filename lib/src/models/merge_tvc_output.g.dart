@@ -7,13 +7,7 @@ part of 'merge_tvc_output.dart';
 // **************************************************************************
 
 MergeTvcOutput _$MergeTvcOutputFromJson(Map<String, dynamic> json) =>
-    MergeTvcOutput(
-      json['tvc'] as String,
-      json['hash'] as String,
-    );
+    MergeTvcOutput(json['tvc'] as String, json['hash'] as String);
 
 Map<String, dynamic> _$MergeTvcOutputToJson(MergeTvcOutput instance) =>
-    <String, dynamic>{
-      'tvc': instance.tvc,
-      'hash': instance.hash,
-    };
+    <String, dynamic>{'tvc': instance.tvc, 'hash': instance.hash};

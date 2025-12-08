@@ -6,7 +6,11 @@ part 'send_external_message_delayed_input.g.dart';
 @JsonSerializable()
 class SendExternalMessageDelayedInput {
   const SendExternalMessageDelayedInput(
-      this.publicKey, this.recipient, this.stateInit, this.payload);
+    this.publicKey,
+    this.recipient,
+    this.stateInit,
+    this.payload,
+  );
 
   ///The public key of the preferred account.
   ///It is the same publicKey as the `accountInteraction.publicKey`, but it must be explicitly provided

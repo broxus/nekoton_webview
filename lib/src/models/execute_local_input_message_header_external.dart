@@ -6,7 +6,10 @@ part 'execute_local_input_message_header_external.g.dart';
 @JsonSerializable()
 class ExecuteLocalInputMessageHeaderExternal {
   const ExecuteLocalInputMessageHeaderExternal(
-      this.type, this.publicKey, this.withoutSignature);
+    this.type,
+    this.publicKey,
+    this.withoutSignature,
+  );
 
   ///External message header
   final String type;
@@ -18,8 +21,8 @@ class ExecuteLocalInputMessageHeaderExternal {
   final bool? withoutSignature;
 
   factory ExecuteLocalInputMessageHeaderExternal.fromJson(
-          Map<String, dynamic> json) =>
-      _$ExecuteLocalInputMessageHeaderExternalFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$ExecuteLocalInputMessageHeaderExternalFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$ExecuteLocalInputMessageHeaderExternalToJson(this);

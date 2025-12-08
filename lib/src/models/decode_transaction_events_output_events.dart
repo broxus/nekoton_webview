@@ -11,8 +11,8 @@ class DecodeTransactionEventsOutputEvents {
   final Map<String, Object?> data;
 
   factory DecodeTransactionEventsOutputEvents.fromJson(
-          Map<String, dynamic> json) =>
-      _$DecodeTransactionEventsOutputEventsFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$DecodeTransactionEventsOutputEventsFromJson(json);
 
   Map<String, dynamic> toJson() =>
       _$DecodeTransactionEventsOutputEventsToJson(this);

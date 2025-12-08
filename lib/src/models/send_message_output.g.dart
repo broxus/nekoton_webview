@@ -12,6 +12,4 @@ SendMessageOutput _$SendMessageOutputFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SendMessageOutputToJson(SendMessageOutput instance) =>
-    <String, dynamic>{
-      'transaction': instance.transaction.toJson(),
-    };
+    <String, dynamic>{'transaction': instance.transaction.toJson()};

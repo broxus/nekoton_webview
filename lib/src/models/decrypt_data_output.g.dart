@@ -7,11 +7,7 @@ part of 'decrypt_data_output.dart';
 // **************************************************************************
 
 DecryptDataOutput _$DecryptDataOutputFromJson(Map<String, dynamic> json) =>
-    DecryptDataOutput(
-      json['data'] as String,
-    );
+    DecryptDataOutput(json['data'] as String);
 
 Map<String, dynamic> _$DecryptDataOutputToJson(DecryptDataOutput instance) =>
-    <String, dynamic>{
-      'data': instance.data,
-    };
+    <String, dynamic>{'data': instance.data};

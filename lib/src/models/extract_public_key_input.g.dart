@@ -7,13 +7,9 @@ part of 'extract_public_key_input.dart';
 // **************************************************************************
 
 ExtractPublicKeyInput _$ExtractPublicKeyInputFromJson(
-        Map<String, dynamic> json) =>
-    ExtractPublicKeyInput(
-      json['boc'] as String,
-    );
+  Map<String, dynamic> json,
+) => ExtractPublicKeyInput(json['boc'] as String);
 
 Map<String, dynamic> _$ExtractPublicKeyInputToJson(
-        ExtractPublicKeyInput instance) =>
-    <String, dynamic>{
-      'boc': instance.boc,
-    };
+  ExtractPublicKeyInput instance,
+) => <String, dynamic>{'boc': instance.boc};

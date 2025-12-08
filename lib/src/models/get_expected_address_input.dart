@@ -6,7 +6,12 @@ part 'get_expected_address_input.g.dart';
 @JsonSerializable()
 class GetExpectedAddressInput {
   const GetExpectedAddressInput(
-      this.tvc, this.abi, this.workchain, this.publicKey, this.initParams);
+    this.tvc,
+    this.abi,
+    this.workchain,
+    this.publicKey,
+    this.initParams,
+  );
 
   ///Base64 encoded TVC file
   final String tvc;
