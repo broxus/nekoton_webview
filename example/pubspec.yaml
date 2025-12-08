@@ -4,22 +4,22 @@ version: 1.12.0
 publish_to: none
 
 environment:
-  sdk: ">=3.5.0 <4.0.0"
+  sdk: ">=3.10.0 <4.0.0"
 
 dependencies:
-  bloc: ^8.1.4
+  bloc: ^9.1.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.1.1
   flutter_inappwebview: 6.1.5
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
+  intl: ^0.20.2
   nekoton_webview:
     path: ../
 
 dev_dependencies:
-  bloc_test: ^9.1.7
+  bloc_test: ^10.0.0
   broxus_flutter_analysis:
     git:
       url: https://github.com/broxus/flutter_templates.git
@@ -28,7 +28,7 @@ dev_dependencies:
     sdk: flutter
   integration_test:
     sdk: flutter
-  mocktail: ^0.3.0
+  mocktail: ^1.0.4
 
 flutter:
   uses-material-design: true
