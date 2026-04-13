@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-04-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`nekoton_webview` - `v0.2.1`](#nekoton_webview---v021)
+
+---
+
+#### `nekoton_webview` - `v0.2.1`
+
+ - **FEAT**: update Flutter version to 3.41.6. ([46a34076](https://github.com/broxus/nekoton_webview/commit/46a340767113bf6185da1baa76c603527aa00d7f))
+
+## 0.2.1
+
+ - **FEAT**: update Flutter version to 3.41.6. ([46a34076](https://github.com/broxus/nekoton_webview/commit/46a340767113bf6185da1baa76c603527aa00d7f))
+
+
 ## 2025-12-08
 
 ### Changes
